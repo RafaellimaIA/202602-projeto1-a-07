@@ -2,6 +2,17 @@
 
 > Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026  
 > Cliente: **Bulbe Energia** · Turma **A** · Squad **07**
+### Integrantes
+
+- Rafael Lima
+- Rafaela Rezek
+- Matheus Braga
+- Fernanda Venturato
+- Isabela Pires
+### Organização do projeto
+
+- GitHub Repository: `202602-projeto1-a-07`
+- GitHub Project: `202602-projeto1-a-07`
 
 **Proposta inicial:** uma experiência web para acompanhar o cliente novo desde a adesão até o pagamento da primeira fatura, deixando claro o andamento da conexão, explicando a primeira fatura e facilitando o pagamento.
 
