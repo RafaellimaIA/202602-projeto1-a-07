@@ -2,7 +2,7 @@
 
 > Entregável da Aula 19 · Squad 07 · Turma A
 
-## Persona
+## Persona 1: Marina
 
 - **Nome e idade:** Marina, 38 anos
 - **Contexto:** cliente pessoa física no primeiro mês; aderiu pelo celular após ver um anúncio no Instagram e paga cerca de R$ 280 de luz por mês.
