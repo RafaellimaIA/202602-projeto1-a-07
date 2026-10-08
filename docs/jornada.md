@@ -10,6 +10,17 @@
 - **Medos e dúvidas:** “Isso é golpe?”, “Vou pagar duas contas?” e “E se a fatura não chegar?”.
 - **Canais que usa:** WhatsApp durante o dia; quase não abre e-mail e ainda não baixou o app.
 
+## Persona 2: Sergio
+- **Nome e idade:** Sérgio Almeida, 56 anos. Mora em Minas Gerais, em casa própria, e a conta de luz está no nome da esposa.
+- **Contexto:** Usa o celular quase só para WhatsApp e ligações, e raramente instala aplicativos. Um colega de trabalho contou no almoço que a conta de luz dele caiu depois que entrou na Bulbe e mandou o link pelo WhatsApp. Sérgio baixou o app, tocou em "Quero economizar" e preencheu o cadastro com o colega ao lado. Como a conta não é dele, precisou pedir o CPF da esposa e fotografar a conta de papel da Cemig, o que levou várias tentativas. Aceitou os termos sem ler, porque confia no colega. Terminou o cadastro esperando que a conta já viesse menor no mês seguinte, sem saber que o desconto pode levar até 90 dias.
+- **Objetivo:** Pagar menos na conta de luz de casa sem complicação, sabendo exatamente quanto pagar e onde pagar, de preferência do jeito que já está acostumado (boleto). Também quer poder mostrar à esposa que a economia veio e que não foi enganado.
+- **Medos e dúvidas:**
+  - "Fiz tudo no celular, mas e agora? Não chegou nada dizendo que deu certo."
+  - "Meu colega disse que a conta diminui, mas veio igual. Será que eu fiz alguma coisa errada?"
+  - "Chegaram duas contas, a da Cemig barata e a da Bulbe cara. Qual eu pago? Se eu pagar só uma, vão cortar a nossa luz?"
+  - "Dei o CPF da minha esposa e a foto da conta. Se for golpe, a culpa é minha."
+- **Canais que usa:** WhatsApp (principal, com áudios e mensagens), ligação telefônica, conversa pessoal com o colega que indicou, a conta de papel que chega da Cemig, e boleto pago no banco ou na lotérica. Quase não usa e-mail e só mexe no app da Bulbe com ajuda da filha ou do colega.
+
 ## Mapa
 
 ![Mapa de jornada](wireframes/jornada.png)
