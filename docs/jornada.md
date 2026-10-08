@@ -50,6 +50,17 @@ Medos e dúvidas:
 
 Canais que usa: E-mail para assuntos financeiros, WhatsApp para comunicação rápida, computador do trabalho e aplicativo do banco no celular para pagamentos por PIX.
 
+## Persona 5: Maria
+
+- **Nome e idade:** Dona Maria, 68 anos.
+- **Contexto:** Aposentada, mora sozinha e vive com uma renda fixa. Sua filha indicou a Bulbe Energia para ajudá-la a economizar na conta de luz, mas Maria tem pouca familiaridade com tecnologia e receio de cair em golpes digitais.
+- **Objetivo:** Reduzir o valor da conta de luz sem precisar aprender a utilizar aplicativos complexos ou mudar sua rotina de pagamento.
+- **Medos e dúvidas:**
+  - "Isso não é um golpe para tirarem dinheiro da minha aposentadoria?"
+  - "Se eu não conseguir abrir o documento no celular, como vou saber o valor que tenho que pagar?"
+  - "Posso continuar pagando o boleto na lotérica como sempre fiz?"
+- **Canais que usa:** WhatsApp, principalmente mensagens de áudio e texto, ligações telefônicas e boletos impressos, pagos na lotérica ou no caixa do banco.
+
 ## Mapa
 
 ![Mapa de jornada](wireframes/jornada.png)
