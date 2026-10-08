@@ -50,27 +50,16 @@ Medos e dúvidas:
 
 Canais que usa: E-mail para assuntos financeiros, WhatsApp para comunicação rápida, computador do trabalho e aplicativo do banco no celular para pagamentos por PIX.
 
-## Persona escolhida: Sergio Carlos
+## Persona 5: Maria
 
-Persona (Nome e Idade): Sérgio Carlos Almeida, 50 anos. Engenheiro de obras, mora em Minas Gerais em casa própria com a esposa e dois filhos, sendo o responsável por gerenciar as contas da família (embora a conta de luz da Cemig esteja no nome da esposa).
-
-Contexto: Conheceu a Bulbe por indicação de um colega de trabalho e por ter visto anúncios online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar e pagar menos na energia do imóvel, mas tem receio de processos burocráticos e pouca familiaridade com aplicativos. Ao fazer o cadastro no app pelo celular com a ajuda do colega, precisou pegar o CPF da esposa e tirar várias fotos da conta de papel da Cemig até conseguir enviar. Concluiu o cadastro esperando uma economia imediata, sem saber que o desconto pode levar até 90 dias para começar a ser aplicado.
-
-Objetivo: Pagar menos na conta de luz de casa sem complicação e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente. Quer saber exatamente quanto e onde pagar (de preferência via boleto bancário ou PIX) e provar para a esposa que fez um bom negócio e não foi enganado.
-
-Medos e dúvidas:
-
-"Fiz tudo no celular, mas e agora? Não chegou nada confirmando que deu certo."
-
-"Será que vou ter que pagar duas faturas separadas todo mês (uma da Cemig e uma da Bulbe)? Se pagar só uma, vão cortar a nossa luz?"
-
-"Meu colega disse que a conta diminuiria, mas veio igual. Fiz alguma coisa errada ou o desconto demora?"
-
-"Se houver algum problema na distribuição de energia ou na leitura, a responsabilidade é da Bulbe ou da Cemig?"
-
-"Forneci o CPF da minha esposa e a foto da conta de luz. Se for golpe ou se vazar algum dado, a culpa será minha."
-
-Canais que usa: WhatsApp (mensagens e áudios) para comunicação rápida, e-mail para assuntos financeiros formais, chamadas telefônicas, computador do trabalho, conta de papel da Cemig e aplicativos de banco no celular para pagamento por PIX ou boleto. Só mexe no aplicativo da Bulbe se tiver ajuda da filha ou do colega do trabalho
+- **Nome e idade:** Dona Maria, 68 anos.
+- **Contexto:** Aposentada, mora sozinha e vive com uma renda fixa. Sua filha indicou a Bulbe Energia para ajudá-la a economizar na conta de luz, mas Maria tem pouca familiaridade com tecnologia e receio de cair em golpes digitais.
+- **Objetivo:** Reduzir o valor da conta de luz sem precisar aprender a utilizar aplicativos complexos ou mudar sua rotina de pagamento.
+- **Medos e dúvidas:**
+  - "Isso não é um golpe para tirarem dinheiro da minha aposentadoria?"
+  - "Se eu não conseguir abrir o documento no celular, como vou saber o valor que tenho que pagar?"
+  - "Posso continuar pagando o boleto na lotérica como sempre fiz?"
+- **Canais que usa:** WhatsApp, principalmente mensagens de áudio e texto, ligações telefônicas e boletos impressos, pagos na lotérica ou no caixa do banco.
 
 ## Mapa
 
