@@ -20,6 +20,19 @@
   - "Chegaram duas contas, a da Cemig barata e a da Bulbe cara. Qual eu pago? Se eu pagar só uma, vão cortar a nossa luz?"
   - "Dei o CPF da minha esposa e a foto da conta. Se for golpe, a culpa é minha."
 - **Canais que usa:** WhatsApp (principal, com áudios e mensagens), ligação telefônica, conversa pessoal com o colega que indicou, a conta de papel que chega da Cemig, e boleto pago no banco ou na lotérica. Quase não usa e-mail e só mexe no app da Bulbe com ajuda da filha ou do colega.
+## Persona 3: Mariana
+Persona: Mariana Silva, 26 anos.
+
+Contexto: Designer gráfica, mora num apartamento alugado e faz questão de consumir de empresas sustentáveis. Descobriu a Bulbe pelas redes sociais enquanto procurava formas de usar energia limpa sem precisar de instalar painéis solares no teto do prédio.
+
+Objetivo: Contratar energia solar de forma totalmente online, rápida e sem burocracia, ajudando o meio ambiente e economizando na conta de luz.
+
+Medos e dúvidas:
+
+“Será que o contrato de fidelidade vai me impedir de cancelar o serviço caso eu decida mudar de apartamento no próximo ano?”
+“Quanto tempo demora o processo de adesão até eu começar a receber os descontos na conta de luz?”
+“Será que a economia na conta de energia realmente compensa o tempo gasto com o cadastro?”
+Canais utilizados: Utiliza principalmente Instagram, WhatsApp e e-mail, realizando a maioria das suas atividades pelo celular. Prefere processos totalmente digitais, evitando documentos em papel, e costuma realizar seus pagamentos por PIX ou débito automático.
 
 ## Mapa
 
