@@ -34,6 +34,22 @@ Medos e dúvidas:
 “Será que a economia na conta de energia realmente compensa o tempo gasto com o cadastro?”
 Canais utilizados: Utiliza principalmente Instagram, WhatsApp e e-mail, realizando a maioria das suas atividades pelo celular. Prefere processos totalmente digitais, evitando documentos em papel, e costuma realizar seus pagamentos por PIX ou débito automático.
 
+## Persona 4: Carlos Eduardo
+
+Contexto: É engenheiro civil, mora com a esposa e dois filhos e é o responsável por pagar todas as contas da casa. Conheceu a Bulbe por um anúncio online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar, mas tem receio de processos burocráticos.
+
+Objetivo: Pagar menos na conta de energia do apartamento e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente.
+
+Medos e dúvidas:
+
+"Será que vou ter que pagar duas faturas separadas todo mês?"
+
+"E se no inverno o consumo mudar, o desconto continua valendo a pena?"
+
+"Se houver algum problema na distribuição, a culpa é da Bulbe ou da concessionária?"
+
+Canais que usa: E-mail para assuntos financeiros, WhatsApp para comunicação rápida, computador do trabalho e aplicativo do banco no celular para pagamentos por PIX.
+
 ## Mapa
 
 ![Mapa de jornada](wireframes/jornada.png)
