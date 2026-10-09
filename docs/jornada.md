@@ -2,13 +2,23 @@
 
 > Entregável da Aula 19 · Squad 07 · Turma A
 
-## Persona 1: Marina
+## Persona 1: Roberto
 
-- **Nome e idade:** Marina, 38 anos
-- **Contexto:** cliente pessoa física no primeiro mês; aderiu pelo celular após ver um anúncio no Instagram e paga cerca de R$ 280 de luz por mês.
-- **Objetivo:** pagar menos pela energia, sem dor de cabeça e sem mudar a rotina.
-- **Medos e dúvidas:** “Isso é golpe?”, “Vou pagar duas contas?” e “E se a fatura não chegar?”.
-- **Canais que usa:** WhatsApp durante o dia; quase não abre e-mail e ainda não baixou o app.
+Persona (Nome e Idade): Roberto Mendes, 53 anos.
+
+Contexto: É dono de uma padaria de bairro com alto consumo de energia por causa dos fornos e frigoríficos. Um fornecedor comentou sobre a Bulbe como uma forma de cortar custos fixos da empresa.
+
+Objetivo: Reduzir o valor da fatura de energia do seu negócio para reinvestir a economia na compra de novos equipamentos.
+
+Medos e dúvidas:
+
+"Se houver falha na energia solar, o meu estabelecimento corre o risco de ficar sem luz e estragar mercadoria?"
+
+"Como lanço a fatura da Bulbe na contabilidade da empresa?"
+
+"O desconto é garantido durante os meses de maior movimento?"
+
+Canais que usa: WhatsApp para atendimento ao cliente e conversas, balcão do banco ou internet banking no computador para gestão da empresa e telefone direto.
 
 ## Persona 2: Sergio
 - **Nome e idade:** Sérgio Almeida, 56 anos. Mora em Minas Gerais, em casa própria, e a conta de luz está no nome da esposa.
