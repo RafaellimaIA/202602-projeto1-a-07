@@ -16,6 +16,10 @@
 - [ ] A tela deve apresentar as próximas etapas do processo de ativação.
 - [ ] O aplicativo deve informar que o desconto pode levar até 90 dias para começar a ser aplicado.
 - [ ] O usuário deve conseguir visualizar o status atual da contratação.
+- [ ] O usuário deve conseguir identificar quais etapas já foram concluídas e quais ainda estão pendentes.
+- [ ] O aplicativo deve informar quando a contratação for confirmada com sucesso.
+- [ ] O aplicativo deve informar que o usuário receberá atualizações sobre o andamento da contratação por e-mail ou WhatsApp.
+
 
 
 *Indicador que pretende mover:* Churn do 1º mês — reduzir o abandono de novos clientes causado pela falta de clareza sobre o início dos descontos.
