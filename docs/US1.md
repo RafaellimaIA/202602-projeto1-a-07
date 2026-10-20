@@ -4,23 +4,22 @@
 
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como Sérgio Carlos, quero receber orientações claras sobre o primeiro acesso à Bulbe e sobre onde consultar informações da minha adesão, para utilizar o serviço com segurança e entender como acompanhar minha economia. | Confirmar oportunidade correspondente no mapa de jornada | Alta | Vincular Issue correspondente |
+| HU01 |Como Sérgio Carlos, quero ter acesso a um chatbot que responda às minhas dúvidas em tempo real, para compreender melhor as etapas do processo de contratação e esclarecer minhas dúvidas de forma rápida e prática.|1| Média | #14 |
 
 ## Critérios de aceite
 
-### HU01 — Primeiro acesso de Sérgio Carlos
+### HU01 
 
-- [ ] A tela deve apresentar claramente as opções “Entrar”, “Primeiro acesso” e “Quero economizar”.
-- [ ] A opção “Primeiro acesso” deve explicar como iniciar o acesso à conta.
-- [ ] Os textos devem utilizar linguagem simples e objetiva.
-- [ ] A tela deve indicar claramente o próximo passo.
-- [ ] O cliente deve conseguir identificar onde consultar informações sobre sua adesão e economia.
-- [ ] Os botões e as orientações devem ser legíveis e fáceis de localizar.
+*História:* Como Sérgio Carlos, quero ter acesso a um chatbot que responda às minhas dúvidas em tempo real, para compreender melhor as etapas do processo de contratação de forma rápida e prática.
 
-## Dor do usuário
+*Oportunidade de origem:* Dificuldade dos usuários em esclarecer dúvidas durante o processo de contratação e falta de acesso rápido às informações.
 
-Sérgio pode ter dificuldade para compreender as opções da tela inicial e descobrir como começar a utilizar sua conta. Essa incerteza pode gerar insegurança e dificultar o acesso às informações sobre sua adesão e economia.
+*Critérios de aceite:*
+- [ ] O aplicativo deve disponibilizar um chatbot para atendimento automatizado.
+- [ ] O usuário deve conseguir enviar perguntas por meio de mensagens de texto.
+- [ ] O chatbot deve responder automaticamente às dúvidas frequentes sobre o processo de contratação.
+- [ ] O chatbot deve fornecer informações claras sobre as etapas de contratação, ativação e início dos descontos.
+- [ ] Caso o chatbot não consiga responder a uma pergunta, deve orientar o usuário sobre como entrar em contato com o suporte.
+- [ ] O usuário deve conseguir acessar o chatbot durante o processo de contratação.
 
-## Indicador de sucesso
-
-Aumentar a proporção de clientes que conseguem realizar o primeiro acesso e localizar informações sobre sua adesão e economia sem precisar de ajuda.
+*Indicador que pretende mover:* Redução do volume de chamados ao suporte — diminuir a quantidade de solicitações de atendimento relacionadas a dúvidas frequentes sobre o processo de contratação.
