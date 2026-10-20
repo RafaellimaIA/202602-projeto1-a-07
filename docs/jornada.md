@@ -2,23 +2,13 @@
 
 > Entregável da Aula 19 · Squad 07 · Turma A
 
-## Persona 1: Roberto
+## Persona
 
-Persona (Nome e Idade): Roberto Mendes, 53 anos.
-
-Contexto: É dono de uma padaria de bairro com alto consumo de energia por causa dos fornos e frigoríficos. Um fornecedor comentou sobre a Bulbe como uma forma de cortar custos fixos da empresa.
-
-Objetivo: Reduzir o valor da fatura de energia do seu negócio para reinvestir a economia na compra de novos equipamentos.
-
-Medos e dúvidas:
-
-"Se houver falha na energia solar, o meu estabelecimento corre o risco de ficar sem luz e estragar mercadoria?"
-
-"Como lanço a fatura da Bulbe na contabilidade da empresa?"
-
-"O desconto é garantido durante os meses de maior movimento?"
-
-Canais que usa: WhatsApp para atendimento ao cliente e conversas, balcão do banco ou internet banking no computador para gestão da empresa e telefone direto.
+- **Nome e idade:** Marina, 38 anos
+- **Contexto:** cliente pessoa física no primeiro mês; aderiu pelo celular após ver um anúncio no Instagram e paga cerca de R$ 280 de luz por mês.
+- **Objetivo:** pagar menos pela energia, sem dor de cabeça e sem mudar a rotina.
+- **Medos e dúvidas:** “Isso é golpe?”, “Vou pagar duas contas?” e “E se a fatura não chegar?”.
+- **Canais que usa:** WhatsApp durante o dia; quase não abre e-mail e ainda não baixou o app.
 
 ## Persona 2: Sergio
 - **Nome e idade:** Sérgio Almeida, 56 anos. Mora em Minas Gerais, em casa própria, e a conta de luz está no nome da esposa.
@@ -33,11 +23,11 @@ Canais que usa: WhatsApp para atendimento ao cliente e conversas, balcão do ban
 ## Persona 3: Mariana
 Persona: Mariana Silva, 26 anos.
 
-Contexto: Designer gráfica, mora num apartamento alugado e faz questão de consumir de empresas sustentáveis. Descobriu a Bulbe pelas redes sociais enquanto procurava formas de usar energia limpa sem precisar de instalar painéis solares no teto do prédio.
+**Contexto**: Designer gráfica, mora num apartamento alugado e faz questão de consumir de empresas sustentáveis. Descobriu a Bulbe pelas redes sociais enquanto procurava formas de usar energia limpa sem precisar de instalar painéis solares no teto do prédio.
 
-Objetivo: Contratar energia solar de forma totalmente online, rápida e sem burocracia, ajudando o meio ambiente e economizando na conta de luz.
+**Objetivo**: Contratar energia solar de forma totalmente online, rápida e sem burocracia, ajudando o meio ambiente e economizando na conta de luz.
 
-Medos e dúvidas:
+**Medos e dúvidas**:
 
 “Será que o contrato de fidelidade vai me impedir de cancelar o serviço caso eu decida mudar de apartamento no próximo ano?”
 “Quanto tempo demora o processo de adesão até eu começar a receber os descontos na conta de luz?”
@@ -46,11 +36,11 @@ Canais utilizados: Utiliza principalmente Instagram, WhatsApp e e-mail, realizan
 
 ## Persona 4: Carlos Eduardo
 
-Contexto: É engenheiro civil, mora com a esposa e dois filhos e é o responsável por pagar todas as contas da casa. Conheceu a Bulbe por um anúncio online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar, mas tem receio de processos burocráticos.
+**Contexto**: É engenheiro civil, mora com a esposa e dois filhos e é o responsável por pagar todas as contas da casa. Conheceu a Bulbe por um anúncio online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar, mas tem receio de processos burocráticos.
 
-Objetivo: Pagar menos na conta de energia do apartamento e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente.
+**Objetivo**: Pagar menos na conta de energia do apartamento e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente.
 
-Medos e dúvidas:
+**Medos e dúvidas**:
 
 "Será que vou ter que pagar duas faturas separadas todo mês?"
 
