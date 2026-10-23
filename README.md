@@ -30,7 +30,10 @@ O caso da Bulbe mostra que a principal concentração de inadimplência está no
 
 ## 2. Persona e jornada
 
-- **Persona de referência:** Marina, 38 anos, cliente PF no primeiro mês, usa principalmente WhatsApp e busca economizar na conta de energia sem complicação.
+- **Persona de referência:** Sérgio Carlos Almeida, 50 anos. Engenheiro de obras, mora em Minas Gerais em casa própria com a esposa e dois filhos, sendo o responsável por gerenciar as contas da família (embora a conta de luz da Cemig esteja no nome da esposa).
+Contexto: Conheceu a Bulbe por indicação de um colega de trabalho e por ter visto anúncios online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar e pagar menos na energia do imóvel, mas tem receio de processos burocráticos e pouca familiaridade com aplicativos. Ao fazer o cadastro no app pelo celular com a ajuda do colega, precisou pegar o CPF da esposa e tirar várias fotos da conta de papel da Cemig até conseguir enviar. Concluiu o cadastro esperando uma economia imediata, sem saber que o desconto pode levar até 90 dias para começar a ser aplicado.
+Objetivo: Pagar menos na conta de luz de casa sem complicação e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente. Quer saber exatamente quanto e onde pagar (de preferência via boleto bancário ou PIX) e provar para a esposa que fez um bom negócio e não foi enganado.
+
 - **Mapa de jornada:** [docs/jornada.md](docs/jornada.md)
 
 ## 3. Solução
