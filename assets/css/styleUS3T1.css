@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #17139b;
+  --border: #d8e4f2;
+  --muted: #8195b2;
+  --green: #00b98b;
+}
+
+html {
+  min-width: 320px;
+  background: #dedcdc;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blue);
+  background: #dedcdc;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ESTRUTURA PRINCIPAL */
+
+.phone-screen {
+  width: 100%;
+  max-width: 375px;
+  min-height: 667px;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+}
+
+/* CABEÇALHO */
+
+.brand-header {
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background: none;
+  color: #526b8d;
+  font-size: 27px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.logo-mark {
+  width: 13px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-mark i {
+  display: block;
+  width: 11px;
+  height: 4px;
+  border-radius: 1px;
+  background: var(--green);
+  transform: skewY(-22deg);
+}
+
+.logo-mark i:nth-child(2) {
+  background: #00a6d8;
+  transform: skewY(0);
+}
+
+.logo-mark i:nth-child(3) {
+  background: #ff8b36;
+  transform: skewY(22deg);
+}
+
+.step-number {
+  position: absolute;
+  right: 20px;
+  color: #526b8d;
+  font-size: 11px;
+}
+
+.progress-bar {
+  height: 3px;
+  background: #c9d7e2;
+}
+
+.progress-fill {
+  width: 33.33%;
+  height: 100%;
+  background: var(--green);
+}
+
+/* CONTEÚDO */
+
+.screen {
+  min-height: 613px;
+  padding: 22px 20px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 0 9px;
+  font-size: 19px;
+  line-height: 1.12;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: #526b8d;
+  font-size: 11px;
+}
+
+.description {
+  margin: 0 0 15px;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+label,
+.question {
+  margin: 8px 0 5px;
+  color: #344e74;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+input:not([type="checkbox"]),
+select {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  background: white;
+  color: #344e74;
+  font-size: 12px;
+}
+
+input::placeholder {
+  color: #a4b6ca;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--blue);
+}
+
+.info-box {
+  margin-top: 12px;
+  padding: 13px;
+  border-radius: 6px;
+  background: #edf5fc;
+  color: #526b8d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.terms {
+  margin-top: 14px;
+  color: #526b8d;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* BOTÕES */
+
+.primary-button {
+  width: 100%;
+  min-height: 40px;
+  margin-top: auto;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.primary-button:hover {
+  background: #100d79;
+}
+
+/* TITULARIDADE */
+
+.question {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.choice-buttons button {
+  flex: 1;
+  height: 45px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: #344e74;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.choice-buttons button.selected {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+h2 {
+  margin: 18px 0 9px;
+  color: #344e74;
+  font-size: 12px;
+}
+
+#campos-sim,
+#campos-nao {
+  margin-top: 5px;
+}
+
+#campos-sim label,
+#campos-nao label:not(.checkbox-label) {
+  display: block;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: #526b8d;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  accent-color: var(--blue);
+}
+
+.save-option {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+#tela2 .primary-button {
+  margin-top: 0;
+}
+
+#tela2 .primary-button:not(:last-child) {
+  margin-top: auto;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 374px) {
+  .phone-screen {
+    min-height: 100vh;
+  }
+
+  .screen {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    font-size: 17px;
+  }
+}
