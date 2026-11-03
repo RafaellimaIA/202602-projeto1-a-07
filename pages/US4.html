@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Assistente Bulbe</title>
+  <link rel="stylesheet" href="../assets/css/US4.css">
+</head>
+<body>
+  <main class="phone-screen">
+
+    <header class="brand-header" aria-label="Bulbe Energia">
+      <button class="back-button" id="voltar" aria-label="Voltar">‹</button>
+      <div class="logo">
+        bulbe
+        <span class="logo-mark"><i></i><i></i><i></i></span>
+      </div>
+      <span class="step-count" id="contador">2/3</span>
+    </header>
+
+    <div class="progress-track">
+      <div class="progress-bar" id="progresso"></div>
+    </div>
+
+    <!-- TELA 1: ENVIO DA FATURA -->
+    <section class="screen active" id="tela-fatura">
+      <h1>Envie sua conta de luz</h1>
+      <p class="help-text">Em caso de dúvidas, clique aqui</p>
+      <p>
+        Envie uma foto da sua conta de luz mais recente.
+        Ela pode estar em PDF, foto ou print da tela.
+      </p>
+
+      <label class="upload-box" for="arquivo">
+        <span class="upload-icon">▤</span>
+        <strong id="arquivo-texto">Clique para enviar sua conta de luz</strong>
+        <small>PDF, PNG ou JPG (máx. 10 MB)</small>
+      </label>
+
+      <input type="file" id="arquivo"
+        accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg"
+        hidden>
+
+      <div class="info-box">
+        <strong>▣ Dicas para uma boa foto:</strong>
+        <p>• A conta deve estar completa e legível</p>
+        <p>• Aceitamos foto, print ou PDF</p>
+        <p>• Envie a conta mais recente</p>
+      </div>
+
+      <p class="error-message" id="erro-fatura" role="alert"></p>
+      <button class="primary-button" id="proximo">Próximo</button>
+    </section>
+
+    <!-- TELA 2: TERMOS -->
+    <section class="screen" id="tela-termos">
+      <h1>Leia e concorde com os termos para contratar</h1>
+      <p class="help-text">Em caso de dúvidas, clique aqui</p>
+
+      <div class="info-box">
+        <strong>O que você precisa saber:</strong>
+        <p>• A ativação pode levar até 90 dias.</p>
+        <p>• Você continuará recebendo a conta da Cemig.</p>
+        <p>• Você receberá atualizações sobre a adesão.</p>
+      </div>
+
+      <div class="terms-list">
+        <button type="button" class="term-item" data-term="privacidade">
+          Política de privacidade <span>›</span>
+        </button>
+        <button type="button" class="term-item" data-term="adesao">
+          Termo de adesão <span>›</span>
+        </button>
+        <button type="button" class="term-item" data-term="uso">
+          Termos gerais de uso <span>›</span>
+        </button>
+      </div>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="aceite">
+        <span>Aceito os termos acima e confirmo que as informações foram preenchidas corretamente.</span>
+      </label>
+
+      <p class="error-message" id="erro-termos" role="alert"></p>
+      <button class="primary-button" id="contratar">
+        Concordar e contratar
+      </button>
+    </section>
+
+    <!-- TELA 3: CONFIRMAÇÃO -->
+    <section class="screen" id="tela-sucesso">
+      <section class="success-banner">
+        <span>✓</span> Economia contratada com sucesso
+      </section>
+
+      <h1>Sua adesão foi realizada!</h1>
+
+      <div class="info-box important">
+        <strong>IMPORTANTE</strong>
+        <p>
+          Confira se você recebeu uma mensagem de
+          confirmação em seu WhatsApp.
+        </p>
+      </div>
+
+      <button class="help-button" id="abrir-chat">
+        ▢ Precisa de ajuda?
+      </button>
+
+      <button class="primary-button" id="acompanhar">
+        Acompanhar minha adesão
+      </button>
+    </section>
+
+    <!-- ASSISTENTE VIRTUAL -->
+    <section class="chat-panel" id="chat-panel" hidden>
+      <div class="chat-heading">
+        <div>
+          <h2>Assistente Bulbe</h2>
+          <small>Atendimento virtual</small>
+        </div>
+        <button id="fechar-chat" aria-label="Fechar chat">×</button>
+      </div>
+
+      <div class="chat-messages" id="mensagens">
+        <p class="bot-message">
+          Olá! Sou o assistente virtual da Bulbe!
+          Como posso te ajudar?
+        </p>
+      </div>
+
+      <p class="chat-subtitle">Dúvidas frequentes</p>
+      <div class="quick-questions">
+        <button data-question="Qual é o próximo passo da minha adesão?">
+          Ver próximo passo da minha adesão ›
+        </button>
+        <button data-question="Quando o desconto começa?">
+          Quando o desconto começa? ›
+        </button>
+        <button data-question="Como acompanho minha contratação?">
+          Acompanhar status da contratação ›
+        </button>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" placeholder="Digite sua mensagem..." aria-label="Mensagem">
+        <button type="submit" aria-label="Enviar mensagem">➤</button>
+      </form>
+    </section>
+
+    <!-- VISUALIZAÇÃO DEMONSTRATIVA DOS TERMOS -->
+    <dialog id="modal-termos">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-texto"></p>
+      <button id="fechar-modal" class="primary-button">Fechar</button>
+    </dialog>
+
+  </main>
+
+  <script src="../assets/js/US4.js"></script>
+</body>
+</html>
