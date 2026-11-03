@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça como funciona a economia de energia da Bulbe.">
+    <title>Boas-vindas | Bulbe</title>
+    <link rel="styleUS1T1.css" href="carrossel.css">
+    <script src="carrossel.js" defer></script>
+</head>
+
+<body>
+    <main class="phone-screen" aria-label="Apresentação da Bulbe">
+        <header class="brand-header">
+            <button class="back-button" id="backButton" type="button" aria-label="Voltar" hidden>←</button>
+            <a class="logo" href="#" aria-label="Bulbe - início">
+                <span>bulbe</span><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+            </a>
+            <button class="skip-button" id="skipButton" type="button">Pular</button>
+        </header>
+
+        <section class="carousel" aria-roledescription="carrossel" aria-label="Como funciona a Bulbe">
+            <div class="slides" id="slides" aria-live="polite">
+
+                <!-- Tela 1 -->
+                <article class="slide is-active" data-slide="0">
+                    <div class="illustration illustration-intro" aria-hidden="true">
+                        <span class="decor decor-circle"></span>
+                        <span class="decor decor-leaf"></span>
+                        <span class="icon-tile tile-light">ϟ</span>
+
+                        <div class="energy-flow">
+                            <div class="energy-card">
+                                <span>ϟ</span>
+                                <b>Bulbe</b>
+                                <small>gera energia</small>
+                            </div>
+
+                            <span class="flow-arrow">⟶<small>créditos</small></span>
+
+                            <div class="energy-card account-card">
+                                <span>▤</span>
+                                <b>Sua conta</b>
+                                <small>recebe desconto</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-copy">
+                        <p class="eyebrow">ENERGIA MAIS EM CONTA</p>
+                        <h1>Economizar com a Bulbe é simples</h1>
+                        <p>A Bulbe gera energia limpa e envia créditos para a sua conta de luz. A Cemig desconta esses
+                            créditos do seu consumo.</p>
+                    </div>
+                </article>
+
+                <!-- Tela 2 -->
+                <article class="slide" data-slide="1" aria-hidden="true">
+                    <div class="illustration illustration-discount" aria-hidden="true">
+                        <span class="decor decor-circle"></span>
+                        <span class="decor decor-leaf"></span>
+                        <span class="icon-tile tile-light">✓</span>
+
+                        <div class="discount-orbit">
+                            <div class="discount-center">
+                                <strong>até<br>15%</strong>
+                                <small>de desconto</small>
+                            </div>
+                        </div>
+
+                        <span class="float-tag tag-top">sem entrada</span>
+                        <span class="float-tag tag-bottom">sem obras</span>
+                    </div>
+
+                    <div class="slide-copy">
+                        <p class="eyebrow">ECONOMIA TODO MÊS</p>
+                        <h1>Até 15% de desconto na energia</h1>
+                        <p>Você continua usando energia normalmente. O desconto aparece sobre a energia compensada, sem
+                            obras ou investimento.</p>
+                    </div>
+                </article>
+
+                <!-- Tela 3 -->
+                <article class="slide" data-slide="2" aria-hidden="true">
+                    <div class="illustration illustration-calendar" aria-hidden="true">
+                        <span class="decor decor-circle"></span>
+                        <span class="decor decor-leaf"></span>
+                        <span class="icon-tile tile-light">▦</span>
+
+                        <div class="calendar-card">
+                            <div class="calendar-band">ATÉ 90 DIAS</div>
+                            <div class="calendar-content">
+                                <span class="calendar-icon">▦</span>
+                                <strong>Seu desconto começa</strong>
+                            </div>
+                        </div>
+
+                        <div class="steps">
+                            <span>Cadastro</span>
+                            <i></i>
+                            <span>Validação</span>
+                            <i></i>
+                            <span>Crédito</span>
+                        </div>
+                    </div>
+
+                    <div class="slide-copy">
+                        <p class="eyebrow">PRIMEIRO DESCONTO</p>
+                        <h1>Pode levar até 90 dias</h1>
+                        <p>Esse prazo é necessário para a Cemig vincular sua unidade, fazer a leitura do medidor e
+                            aplicar os créditos no ciclo da fatura.</p>
+                    </div>
+                </article>
+
+                <!-- Tela 4 -->
+                <article class="slide" data-slide="3" aria-hidden="true">
+                    <div class="illustration illustration-bills" aria-hidden="true">
+                        <span class="decor decor-circle"></span>
+                        <span class="decor decor-leaf"></span>
+                        <span class="icon-tile tile-light">▤</span>
+
+                        <div class="bill-pair">
+                            <div class="bill bill-cemig">
+                                <b>Cemig</b>
+                                <strong>Rede + taxas</strong>
+                                <small>Entrega da energia</small>
+                            </div>
+
+                            <span class="plus">+</span>
+
+                            <div class="bill bill-bulbe">
+                                <b>bulbe<span>⌁</span></b>
+                                <strong>Energia</strong>
+                                <small>Já com desconto</small>
+                            </div>
+                        </div>
+
+                        <span class="saving-tag">✓ A soma fica mais econômica</span>
+                    </div>
+
+                    <div class="slide-copy">
+                        <p class="eyebrow">SUAS FATURAS</p>
+                        <h1>Por que chegam duas contas?</h1>
+                        <p>A Cemig continua entregando a energia e cobra taxas obrigatórias. A Bulbe cobra a energia com
+                            desconto. Você não paga a mesma energia duas vezes.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <nav class="carousel-controls" aria-label="Navegação do carrossel">
+            <div class="dots" id="dots">
+                <button class="dot is-active" type="button" aria-label="Ir para a tela 1" aria-current="step"></button>
+                <button class="dot" type="button" aria-label="Ir para a tela 2"></button>
+                <button class="dot" type="button" aria-label="Ir para a tela 3"></button>
+                <button class="dot" type="button" aria-label="Ir para a tela 4"></button>
+            </div>
+
+            <button class="primary-button" id="nextButton" type="button">Continuar</button>
+
+            <p class="swipe-hint" id="swipeHint">Deslize para continuar</p>
+        </nav>
+    </main>
+</body>
+
+</html>
