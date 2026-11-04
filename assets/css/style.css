@@ -1,0 +1,417 @@
+
+/* =====================================================
+   PARTE 1 — TEMPLATE
+   Logo, seta de voltar e economia contratada com sucesso
+===================================================== */
+
+.brand-header {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #c9d7e2;
+}
+
+.brand-header {
+    width: 100%;
+    height: 55px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-bottom: 3px solid #c9d7e2;
+    box-sizing: border-box;
+}
+
+.brand-logo {
+    display: block;
+    width: 90px;
+    height: 35px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button img {
+    display: block;
+    width: 53px;
+    height: 53px;
+    object-fit: contain;
+}
+
+.success-banner {
+    margin: 5px 11px 0;
+    min-height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background: #e3f8ef;
+    color: #00996a;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PARTE 2 — US1
+   Conteúdo da adesão e Assistente Bulbe
+===================================================== */
+
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #17139b;
+    --border: #d8e4f2;
+    --muted: #8195b2;
+    --green: #009f70;
+}
+
+html {
+    min-width: 320px;
+    background: #dedcdc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dedcdc;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estrutura principal */
+
+.phone-screen {
+    width: 100%;
+    max-width: 375px;
+    min-height: 667px;
+    margin: 0 auto;
+    padding-bottom: 17px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Logo e elementos gráficos */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -.7px;
+}
+
+.logo-mark {
+    width: 13px;
+    height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1px;
+}
+
+.logo-mark i,
+.mini-logo i {
+    display: block;
+    width: 11px;
+    height: 4px;
+    border-radius: 1px;
+    background: #00b98b;
+    transform: skewY(-22deg);
+}
+
+.logo-mark i:nth-child(2),
+.mini-logo i:nth-child(2) {
+    background: #00a6d8;
+    transform: skewY(0);
+}
+
+.logo-mark i:nth-child(3),
+.mini-logo i:nth-child(3) {
+    background: #ff8b36;
+    transform: skewY(22deg);
+}
+
+/* Título principal */
+
+.phone-screen h1 {
+    margin: 13px 14px 20px;
+    font-size: 17px;
+    line-height: 1.25;
+    letter-spacing: -.25px;
+}
+
+/* Caixa de informações */
+
+.important-box {
+    margin: 0 11px;
+    min-height: 72px;
+    padding: 11px 11px 9px;
+    border-radius: 7px;
+    background: #edf5fc;
+    color: #526b8d;
+}
+
+.important-box strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    color: var(--blue);
+}
+
+.important-box p {
+    margin: 0;
+    max-width: 255px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Separador do assistente */
+
+.sheet-handle {
+    width: 51px;
+    height: 4px;
+    margin: 16px auto 10px;
+    border-radius: 9px;
+    background: #d8e0eb;
+}
+
+/* Área do assistente */
+
+.chat {
+    padding: 0 13px;
+}
+
+.chat-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.chat-heading h2 {
+    margin: 0 0 2px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.chat-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* Botão fechar */
+
+.close-button {
+    width: 24px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #526a88;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* Mensagem inicial */
+
+.message-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.bot-avatar {
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e1e7f0;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.mini-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.mini-logo i {
+    width: 10px;
+    height: 3px;
+}
+
+.message-bubble {
+    flex: 1;
+    min-height: 59px;
+    padding: 7px 9px;
+    border-radius: 8px;
+    background: #edf5fc;
+    color: #344e74;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.message-time {
+    margin: 6px 0 11px 38px;
+    color: #8ca0bd;
+    font-size: 8px;
+}
+
+/* Dúvidas frequentes */
+
+.faq-title {
+    margin: 0 0 7px;
+    color: #526b8d;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.faq-button {
+    width: 100%;
+    min-height: 38px;
+    padding: 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--blue);
+    text-align: left;
+    font-size: 10px;
+}
+
+.faq-button b {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Acessibilidade dos botões */
+
+.faq-button:focus-visible,
+.close-button:focus-visible,
+.message-form button:focus-visible {
+    outline: 2px solid #00a878;
+    outline-offset: 2px;
+}
+
+/* Respostas do assistente */
+
+.chat-response {
+    margin-top: 9px;
+    padding: 9px 10px;
+    border-radius: 7px;
+    background: #edf5fc;
+    color: #344e74;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+/* Campo de mensagem */
+
+.message-form {
+    height: 40px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: #fff;
+}
+
+.message-form input {
+    min-width: 0;
+    flex: 1;
+    height: 100%;
+    padding: 0 10px;
+    border: 0;
+    outline: none;
+    border-radius: 7px;
+    color: #344e74;
+    font-size: 10px;
+}
+
+.message-form input::placeholder {
+    color: #8ba0bd;
+}
+
+.message-form button {
+    flex: 0 0 39px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.send-icon {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 16px solid var(--blue);
+    transform: rotate(-43deg);
+}
+
+/* Responsividade */
+
+@media (max-width: 374px) {
+    .phone-screen {
+        min-height: 100vh;
+    }
+
+    .chat {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+
+    .phone-screen h1 {
+        font-size: 16px;
+    }
+}
