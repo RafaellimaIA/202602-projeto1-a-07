@@ -3,167 +3,197 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça como funciona a economia de energia da Bulbe.">
-    <title>Boas-vindas | Bulbe</title>
-    <link rel="stylesheet" href="styleUS1T1.css">
-    <link rel="stylesheet" href="pages/assets/carrossel.css">
-    <script src="carrossel.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulbe | Conheça a Bulbe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/carrossel.css">
 </head>
 
 <body>
-    <main class="phone-screen" aria-label="Apresentação da Bulbe">
-        <header class="brand-header">
-            <button class="back-button" id="backButton" type="button" aria-label="Voltar" hidden>←</button>
-            <a class="logo" href="#" aria-label="Bulbe - início">
-                <span>bulbe</span><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <main class="carrossel" aria-label="Conheça a Bulbe">
+
+        <!-- Cabeçalho: voltar | logo | pular -->
+        <header class="carrossel__cabecalho">
+            <a class="carrossel__voltar" href="acesso.html" id="btn-voltar" aria-label="Voltar">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 12H4M10 6l-6 6 6 6" />
+                </svg>
             </a>
-            <button class="skip-button" id="skipButton" type="button">Pular</button>
+            <!-- COLOQUE AQUI O ARQUIVO DA LOGO (assets/logo-bulbe.svg ou .png) -->
+            <img class="carrossel__logo" src="assets/logo-bulbe.svg" alt="bulbe">
+            <button class="carrossel__pular" id="btn-pular" type="button">Pular</button>
         </header>
 
-        <section class="carousel" aria-roledescription="carrossel" aria-label="Como funciona a Bulbe">
-            <div class="slides" id="slides" aria-live="polite">
+        <!-- Slides -->
+        <div class="carrossel__faixa" id="faixa">
 
-                <!-- Tela 1 -->
-                <article class="slide is-active" data-slide="0">
-                    <div class="illustration illustration-intro" aria-hidden="true">
-                        <span class="decor decor-circle"></span>
-                        <span class="decor decor-leaf"></span>
-                        <span class="icon-tile tile-light">ϟ</span>
-
-                        <div class="energy-flow">
-                            <div class="energy-card">
-                                <span>ϟ</span>
-                                <b>Bulbe</b>
-                                <small>gera energia</small>
-                            </div>
-
-                            <span class="flow-arrow">⟶<small>créditos</small></span>
-
-                            <div class="energy-card account-card">
-                                <span>▤</span>
-                                <b>Sua conta</b>
-                                <small>recebe desconto</small>
-                            </div>
+            <!-- 1 -->
+            <section class="carrossel__slide" aria-label="1 de 4">
+                <div class="ilustracao">
+                    <span class="ilustracao__circulo-verde"></span>
+                    <span class="ilustracao__anel ilustracao__anel--topo"></span>
+                    <span class="ilustracao__selo">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00c96b" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </span>
+                    <div class="fluxo">
+                        <div class="fluxo__item">
+                            <span class="fluxo__icone fluxo__icone--verde">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                            </span>
+                            <strong class="fluxo__titulo">Bulbe</strong>
+                            <span class="fluxo__sub">gera energia</span>
+                        </div>
+                        <div class="fluxo__seta">
+                            <svg viewBox="0 0 80 10" width="80" height="10" fill="none" stroke="#00c96b"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 5h76M72 1l5 4-5 4" />
+                            </svg>
+                            <span>créditos</span>
+                        </div>
+                        <div class="fluxo__item">
+                            <span class="fluxo__icone fluxo__icone--azul">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" />
+                                    <path d="M9 8h6M9 12h6" />
+                                </svg>
+                            </span>
+                            <strong class="fluxo__titulo">Sua conta</strong>
+                            <span class="fluxo__sub">recebe desconto</span>
                         </div>
                     </div>
+                </div>
+                <p class="carrossel__etiqueta">Energia mais em conta</p>
+                <h1 class="carrossel__titulo">Economizar com a Bulbe é simples</h1>
+                <p class="carrossel__texto">A Bulbe gera energia limpa e envia créditos para a sua conta de luz. A Cemig
+                    desconta esses créditos do seu consumo.</p>
+            </section>
 
-                    <div class="slide-copy">
-                        <p class="eyebrow">ENERGIA MAIS EM CONTA</p>
-                        <h1>Economizar com a Bulbe é simples</h1>
-                        <p>A Bulbe gera energia limpa e envia créditos para a sua conta de luz. A Cemig desconta esses
-                            créditos do seu consumo.</p>
-                    </div>
-                </article>
-
-                <!-- Tela 2 -->
-                <article class="slide" data-slide="1" aria-hidden="true">
-                    <div class="illustration illustration-discount" aria-hidden="true">
-                        <span class="decor decor-circle"></span>
-                        <span class="decor decor-leaf"></span>
-                        <span class="icon-tile tile-light">✓</span>
-
-                        <div class="discount-orbit">
-                            <div class="discount-center">
-                                <strong>até<br>15%</strong>
-                                <small>de desconto</small>
-                            </div>
+            <!-- 2 -->
+            <section class="carrossel__slide" aria-label="2 de 4">
+                <div class="ilustracao">
+                    <span class="ilustracao__circulo-verde"></span>
+                    <span class="ilustracao__selo">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00c96b" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                    </span>
+                    <div class="desconto">
+                        <span class="desconto__anel desconto__anel--ext"></span>
+                        <span class="desconto__anel desconto__anel--int"></span>
+                        <div class="desconto__miolo">
+                            <span class="desconto__ate">até</span>
+                            <span class="desconto__valor">15%</span>
+                            <span class="desconto__de">de desconto</span>
                         </div>
-
-                        <span class="float-tag tag-top">sem entrada</span>
-                        <span class="float-tag tag-bottom">sem obras</span>
+                        <span class="desconto__pilula desconto__pilula--a">sem entrada</span>
+                        <span class="desconto__pilula desconto__pilula--b">sem obras</span>
                     </div>
+                </div>
+                <p class="carrossel__etiqueta">Economia todo mês</p>
+                <h1 class="carrossel__titulo">Até 15% de desconto na energia</h1>
+                <p class="carrossel__texto">Você continua usando energia normalmente. O desconto aparece sobre a energia
+                    compensada, sem obras ou investimento.</p>
+            </section>
 
-                    <div class="slide-copy">
-                        <p class="eyebrow">ECONOMIA TODO MÊS</p>
-                        <h1>Até 15% de desconto na energia</h1>
-                        <p>Você continua usando energia normalmente. O desconto aparece sobre a energia compensada, sem
-                            obras ou investimento.</p>
-                    </div>
-                </article>
-
-                <!-- Tela 3 -->
-                <article class="slide" data-slide="2" aria-hidden="true">
-                    <div class="illustration illustration-calendar" aria-hidden="true">
-                        <span class="decor decor-circle"></span>
-                        <span class="decor decor-leaf"></span>
-                        <span class="icon-tile tile-light">▦</span>
-
-                        <div class="calendar-card">
-                            <div class="calendar-band">ATÉ 90 DIAS</div>
-                            <div class="calendar-content">
-                                <span class="calendar-icon">▦</span>
+            <!-- 3 -->
+            <section class="carrossel__slide" aria-label="3 de 4">
+                <div class="ilustracao">
+                    <span class="ilustracao__circulo-verde"></span>
+                    <span class="ilustracao__anel ilustracao__anel--topo"></span>
+                    <span class="ilustracao__selo">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00c96b" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="16" rx="3" />
+                            <path d="M8 3v4M16 3v4M3 10h18" />
+                        </svg>
+                    </span>
+                    <div class="prazo">
+                        <div class="prazo__cartao">
+                            <div class="prazo__topo">ATÉ 90 DIAS</div>
+                            <div class="prazo__corpo">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#00c96b"
+                                    stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="5" width="18" height="16" rx="3" />
+                                    <path d="M8 3v4M16 3v4M3 10h18M8 15h3" />
+                                </svg>
                                 <strong>Seu desconto começa</strong>
                             </div>
                         </div>
-
-                        <div class="steps">
-                            <span>Cadastro</span>
-                            <i></i>
-                            <span>Validação</span>
-                            <i></i>
-                            <span>Crédito</span>
+                        <div class="prazo__etapas">
+                            <span>Cadastro</span><i></i><span>Validação</span><i></i><span>Crédito</span>
                         </div>
                     </div>
+                </div>
+                <p class="carrossel__etiqueta">Primeiro desconto</p>
+                <h1 class="carrossel__titulo">Pode levar até 90 dias</h1>
+                <p class="carrossel__texto">Esse prazo é necessário para a Cemig vincular sua unidade, fazer a leitura
+                    do medidor e aplicar os créditos no ciclo da fatura.</p>
+            </section>
 
-                    <div class="slide-copy">
-                        <p class="eyebrow">PRIMEIRO DESCONTO</p>
-                        <h1>Pode levar até 90 dias</h1>
-                        <p>Esse prazo é necessário para a Cemig vincular sua unidade, fazer a leitura do medidor e
-                            aplicar os créditos no ciclo da fatura.</p>
-                    </div>
-                </article>
-
-                <!-- Tela 4 -->
-                <article class="slide" data-slide="3" aria-hidden="true">
-                    <div class="illustration illustration-bills" aria-hidden="true">
-                        <span class="decor decor-circle"></span>
-                        <span class="decor decor-leaf"></span>
-                        <span class="icon-tile tile-light">▤</span>
-
-                        <div class="bill-pair">
-                            <div class="bill bill-cemig">
-                                <b>Cemig</b>
-                                <strong>Rede + taxas</strong>
-                                <small>Entrega da energia</small>
-                            </div>
-
-                            <span class="plus">+</span>
-
-                            <div class="bill bill-bulbe">
-                                <b>bulbe<span>⌁</span></b>
-                                <strong>Energia</strong>
-                                <small>Já com desconto</small>
-                            </div>
+            <!-- 4 -->
+            <section class="carrossel__slide" aria-label="4 de 4">
+                <div class="ilustracao">
+                    <span class="ilustracao__circulo-verde"></span>
+                    <span class="ilustracao__selo">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00c96b" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" />
+                            <path d="M9 8h6M9 12h6" />
+                        </svg>
+                    </span>
+                    <div class="faturas">
+                        <div class="fatura fatura--cemig">
+                            <b class="fatura__marca fatura__marca--cemig">Cemig</b>
+                            <strong>Rede + taxas</strong>
+                            <span>Entrega da energia</span>
                         </div>
-
-                        <span class="saving-tag">✓ A soma fica mais econômica</span>
+                        <span class="faturas__mais">+</span>
+                        <div class="fatura fatura--bulbe">
+                            <img class="fatura__logo" src="assets/logo-bulbe.svg" alt="bulbe">
+                            <strong>Energia</strong>
+                            <span>Já com desconto</span>
+                        </div>
                     </div>
+                    <span class="faturas__selo">
+                        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#00c96b" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        A soma fica mais econômica
+                    </span>
+                </div>
+                <p class="carrossel__etiqueta">Suas faturas</p>
+                <h1 class="carrossel__titulo">Por que chegam duas contas?</h1>
+                <p class="carrossel__texto">A Cemig continua entregando a energia e cobra taxas obrigatórias. A Bulbe
+                    cobra a energia com desconto. Você não paga a mesma energia duas vezes.</p>
+            </section>
+        </div>
 
-                    <div class="slide-copy">
-                        <p class="eyebrow">SUAS FATURAS</p>
-                        <h1>Por que chegam duas contas?</h1>
-                        <p>A Cemig continua entregando a energia e cobra taxas obrigatórias. A Bulbe cobra a energia com
-                            desconto. Você não paga a mesma energia duas vezes.</p>
-                    </div>
-                </article>
-
+        <!-- Rodapé: pontos, botão e dica -->
+        <footer class="carrossel__rodape">
+            <div class="carrossel__pontos" role="tablist" aria-label="Passos">
+                <button class="carrossel__ponto" type="button" aria-label="Passo 1"></button>
+                <button class="carrossel__ponto" type="button" aria-label="Passo 2"></button>
+                <button class="carrossel__ponto" type="button" aria-label="Passo 3"></button>
+                <button class="carrossel__ponto" type="button" aria-label="Passo 4"></button>
             </div>
-        </section>
-
-        <nav class="carousel-controls" aria-label="Navegação do carrossel">
-            <div class="dots" id="dots">
-                <button class="dot is-active" type="button" aria-label="Ir para a tela 1" aria-current="step"></button>
-                <button class="dot" type="button" aria-label="Ir para a tela 2"></button>
-                <button class="dot" type="button" aria-label="Ir para a tela 3"></button>
-                <button class="dot" type="button" aria-label="Ir para a tela 4"></button>
-            </div>
-
-            <button class="primary-button" id="nextButton" type="button">Continuar</button>
-
-            <p class="swipe-hint" id="swipeHint">Deslize para continuar</p>
-        </nav>
+            <a class="carrossel__botao" id="btn-continuar" href="#">Continuar</a>
+            <p class="carrossel__dica" id="dica">Deslize para continuar</p>
+        </footer>
     </main>
+
+    <script src="../assets/js/carrossel.js"></script>
 </body>
 
 </html>
