@@ -1,3 +1,5 @@
+/* CONFIGURAÇÕES GERAIS */
+
 * {
   box-sizing: border-box;
 }
@@ -46,60 +48,55 @@ button {
   overflow: hidden;
 }
 
-/* CABEÇALHO */
+/* =====================================
+   CABEÇALHO PADRÃO BULBE
+===================================== */
 
 .brand-header {
-  height: 51px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 55px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 3px solid #c9d7e2;
 }
+
+/* LOGOTIPO OFICIAL */
+
+.brand-logo {
+  display: block;
+  width: 90px;
+  height: 35px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* BOTÃO VOLTAR */
 
 .back-button {
   position: absolute;
   left: 20px;
-  border: none;
-  background: none;
-  color: #526b8d;
-  font-size: 27px;
-}
-
-.logo {
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 21px;
-  font-weight: 700;
-  letter-spacing: -0.7px;
+  justify-content: center;
+  z-index: 1;
 }
 
-.logo-mark {
-  width: 13px;
-  height: 23px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.logo-mark i {
+.back-button img {
   display: block;
-  width: 11px;
-  height: 4px;
-  border-radius: 1px;
-  background: var(--green);
-  transform: skewY(-22deg);
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
 }
 
-.logo-mark i:nth-child(2) {
-  background: #00a6d8;
-  transform: skewY(0);
-}
-
-.logo-mark i:nth-child(3) {
-  background: #ff8b36;
-  transform: skewY(22deg);
-}
+/* CONTADOR DE ETAPAS */
 
 .step-number {
   position: absolute;
@@ -107,6 +104,8 @@ button {
   color: #526b8d;
   font-size: 11px;
 }
+
+/* BARRA DE PROGRESSO */
 
 .progress-bar {
   height: 3px;
@@ -119,7 +118,9 @@ button {
   background: var(--green);
 }
 
-/* CONTEÚDO */
+/* =====================================
+   US3 — CONTEÚDO DO CADASTRO
+===================================== */
 
 .screen {
   min-height: 613px;
@@ -155,6 +156,8 @@ label,
   font-weight: bold;
 }
 
+/* CAMPOS DO FORMULÁRIO */
+
 input:not([type="checkbox"]),
 select {
   width: 100%;
@@ -177,6 +180,8 @@ select:focus {
   border-color: var(--blue);
 }
 
+/* CAIXAS INFORMATIVAS */
+
 .info-box {
   margin-top: 12px;
   padding: 13px;
@@ -194,7 +199,7 @@ select:focus {
   line-height: 1.4;
 }
 
-/* BOTÕES */
+/* BOTÕES PRINCIPAIS */
 
 .primary-button {
   width: 100%;
@@ -212,7 +217,9 @@ select:focus {
   background: #100d79;
 }
 
-/* TITULARIDADE */
+/* =====================================
+   US3 — TITULARIDADE DA CONTA
+===================================== */
 
 .question {
   margin-top: 8px;
@@ -256,6 +263,8 @@ h2 {
   display: block;
 }
 
+/* CHECKBOXES */
+
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -272,6 +281,8 @@ h2 {
   accent-color: var(--blue);
 }
 
+/* OPÇÃO DE SALVAR DADOS */
+
 .save-option {
   margin-top: auto;
   margin-bottom: 15px;
@@ -282,7 +293,7 @@ h2 {
 }
 
 #tela2 .primary-button:not(:last-child) {
-  margin-top: auto;
+  margin-top: auto; 
 }
 
 /* RESPONSIVIDADE */

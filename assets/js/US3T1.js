@@ -21,6 +21,7 @@ function mostrarEtapa(etapa) {
   tela2.hidden = etapa !== 2;
 
   document.getElementById("numero-etapa").textContent = etapa + "/3";
+
   document.getElementById("progresso").style.width = (etapa / 3) * 100 + "%";
 }
 
@@ -40,10 +41,11 @@ document.getElementById("proximo1").addEventListener("click", () => {
   mostrarEtapa(2);
 });
 
-// BOTÃO VOLTAR
+// BOTÃO VOLTAR DO NOVO TEMPLATE
 
-document.getElementById("voltar").addEventListener("click", () => {
+document.getElementById("voltar").addEventListener("click", (evento) => {
   if (!tela2.hidden) {
+    evento.preventDefault();
     mostrarEtapa(1);
   }
 });
@@ -86,7 +88,7 @@ document.getElementById("nao-sei-cpf").addEventListener("change", (evento) => {
   }
 });
 
-// MÁSCARA SIMPLES DE CPF
+// MÁSCARA DE CPF
 
 document.querySelectorAll(".cpf").forEach((campo) => {
   campo.addEventListener("input", () => {
@@ -100,7 +102,7 @@ document.querySelectorAll(".cpf").forEach((campo) => {
   });
 });
 
-// AVANÇAR E SALVAR DADOS
+// VALIDAR E SALVAR DADOS
 
 document.getElementById("proximo2").addEventListener("click", () => {
   if (titularidade === "") {
@@ -145,6 +147,7 @@ document.getElementById("proximo2").addEventListener("click", () => {
     };
 
     localStorage.setItem("cadastroBulbe", JSON.stringify(dados));
+
     alert("Dados salvos neste navegador!");
   } else {
     localStorage.removeItem("cadastroBulbe");
@@ -170,10 +173,15 @@ if (dadosSalvos) {
   }
 
   document.getElementById("cpf-cliente").value = dadosSalvos.cpfCliente || "";
+
   document.getElementById("cpf-cobranca").value = dadosSalvos.cpfCobranca || "";
+
   document.getElementById("cpf-titular").value = dadosSalvos.cpfTitular || "";
+
   document.getElementById("nao-sei-cpf").checked = !!dadosSalvos.naoSeiCpf;
+
   document.getElementById("cpf-titular").disabled = !!dadosSalvos.naoSeiCpf;
+
   document.getElementById("salvar-dados").checked = true;
 
   mostrarEtapa(2);
