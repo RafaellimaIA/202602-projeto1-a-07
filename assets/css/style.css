@@ -42,6 +42,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .back-button img {
@@ -1727,4 +1731,290 @@ body.pagina-carrossel {
 .us4 .help-pill:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
+}
+
+
+
+/* =====================================================
+   PARTE 7 — US5: ACOMPANHAMENTO DA ADESÃO
+===================================================== */
+
+/* Estrutura principal */
+
+.phone-screen.us5 {
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: 0;
+}
+
+/* Cabeçalho e indicador de etapa */
+
+.us5 .etapa {
+  position: absolute;
+  right: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Conteúdo das telas */
+
+.us5 .tela {
+  padding: 15px;
+}
+
+.us5 .tela h1 {
+  margin: 0 0 25px;
+  color: var(--blue);
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.us5 .descricao {
+  margin: 0;
+  color: #526b8d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Primeira tela */
+
+.us5 #tela1 {
+  min-height: calc(100vh - 55px);
+  min-height: calc(100dvh - 55px);
+  display: flex;
+  flex-direction: column;
+}
+
+.us5 .cartoes {
+  margin-top: 65px;
+}
+
+/* Cartões informativos */
+
+.us5 .informacao {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 7px;
+  background: #edf5fc;
+}
+
+.us5 .informacao h3 {
+  margin: 0 0 8px;
+  color: #435774;
+  font-size: 13px;
+}
+
+.us5 .icone {
+  margin-right: 5px;
+  color: var(--blue);
+  font-size: 18px;
+}
+
+.us5 .informacao h2 {
+  margin: 10px 0;
+  color: var(--blue);
+  font-size: 20px;
+  text-align: center;
+}
+
+.us5 .informacao p {
+  margin: 5px 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Botão principal */
+
+.us5 #btn-acompanhar {
+  width: 100%;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: 45px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.us5 #btn-acompanhar:hover {
+  background: #100d79;
+}
+
+.us5 #btn-acompanhar:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Segunda tela — acompanhamento */
+
+.us5 .acompanhamento {
+  margin-top: 15px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  background: #edf5fc;
+}
+
+/* Etapas da linha do tempo */
+
+.us5 .passo {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.us5 .passo:last-child {
+  padding-bottom: 0;
+}
+
+/* Linha vertical */
+
+.us5 .passo:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  bottom: 0;
+  width: 2px;
+  background: #b5c4d3;
+}
+
+.us5 .passo.concluido::before {
+  background: var(--green);
+}
+
+/* Círculos de progresso */
+
+.us5 .circulo {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #b5c4d3;
+}
+
+.us5 .concluido .circulo {
+  background: var(--green);
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.us5 .andamento .circulo {
+  border: 3px solid #1673f9;
+  background: #edf5fc;
+}
+
+/* Conteúdo de cada etapa */
+
+.us5 .conteudo-passo {
+  flex: 1;
+  min-width: 0;
+}
+
+.us5 .conteudo-passo h3 {
+  margin: 2px 0 5px;
+  color: #435774;
+  font-size: 13px;
+}
+
+.us5 .conteudo-passo p {
+  margin: 5px 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Explicações expansíveis */
+
+.us5 .detalhes {
+  display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #1673f9;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.us5 .detalhes:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Status da etapa */
+
+.us5 .status {
+  display: table;
+  margin: 5px 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #d9e6ff;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.us5 .conteudo-passo .explicacao {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+/* Cartão de dicas */
+
+.us5 .dicas {
+  margin-top: 40px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #edf5fc;
+}
+
+.us5 .dicas h3 {
+  margin: 0 0 5px;
+  color: #1673f9;
+  font-size: 13px;
+}
+
+.us5 .dicas p {
+  margin: 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Visibilidade das telas e explicações */
+
+.us5 [hidden] {
+  display: none !important;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+  .phone-screen.us5 {
+    max-width: 100%;
+  }
+
+  .us5 .tela h1 {
+    font-size: 21px;
+  }
+
+  .us5 .cartoes {
+    margin-top: 45px;
+  }
 }
