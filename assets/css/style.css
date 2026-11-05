@@ -1,15 +1,45 @@
 /* =====================================================
+   CONFIGURAÇÕES GLOBAIS
+   Reset, variáveis e estilos básicos
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #17139b;
+  --border: #d8e4f2;
+  --muted: #8195b2;
+  --green: #009f70;
+}
+
+html {
+  min-width: 320px;
+  background: #dedcdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--blue);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dedcdc;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =====================================================
    PARTE 1 — TEMPLATE
    Logo, seta de voltar e economia contratada com sucesso
 ===================================================== */
-
-.brand-header {
-  height: 51px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 3px solid #c9d7e2;
-}
 
 .brand-header {
   width: 100%;
@@ -55,6 +85,18 @@
   object-fit: contain;
 }
 
+/* Estrutura compartilhada das telas */
+
+.phone-screen {
+  width: 100%;
+  max-width: 375px;
+  min-height: 667px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+  background: #fff;
+  overflow: hidden;
+}
+
 .success-banner {
   margin: 5px 11px 0;
   min-height: 29px;
@@ -69,59 +111,28 @@
   font-weight: 700;
 }
 
+/* Botões principais — US3, US4 e US5 */
 
+.us3 .primary-button,
+.us4 .btn-primary,
+.us5 #btn-acompanhar {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
 
 /* =====================================================
    PARTE 2 — US1
    Conteúdo da adesão e Assistente Bulbe
 ===================================================== */
-
-/* Configurações gerais */
-
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --blue: #17139b;
-  --border: #d8e4f2;
-  --muted: #8195b2;
-  --green: #009f70;
-}
-
-html {
-  min-width: 320px;
-  background: #dedcdc;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: var(--blue);
-  font-family: Arial, Helvetica, sans-serif;
-  background: #dedcdc;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Estrutura principal */
-
-.phone-screen {
-  width: 100%;
-  max-width: 375px;
-  min-height: 667px;
-  margin: 0 auto;
-  padding-bottom: 17px;
-  background: #fff;
-  overflow: hidden;
-}
 
 /* Logo e elementos gráficos */
 
@@ -168,7 +179,7 @@ button {
 
 /* Título principal */
 
-.phone-screen h1 {
+.us1 h1 {
   margin: 13px 14px 20px;
   font-size: 17px;
   line-height: 1.25;
@@ -415,12 +426,10 @@ button {
     padding-left: 11px;
   }
 
-  .phone-screen h1 {
+  .us1 h1 {
     font-size: 16px;
   }
 }
-
-
 
 /* =====================================================
    PARTE 3 — US2: TELA DE ACESSO
@@ -443,7 +452,13 @@ button {
   margin: 0 auto;
   background: var(--acesso-branco);
   color: var(--acesso-texto);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
@@ -591,8 +606,6 @@ button {
   text-decoration: underline;
 }
 
-
-
 /* =====================================================
    PARTE 4 — US2: CARROSSEL
    Onboarding e apresentação da Bulbe
@@ -633,505 +646,507 @@ body.pagina-carrossel {
 
 /* ===== Estrutura da tela ===== */
 .carrossel {
-    max-width: var(--largura-max);
-    min-height: 100dvh;
-    height: 100dvh;
-    margin: 0 auto;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  max-width: var(--largura-max);
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* ===== Cabeçalho ===== */
 .carrossel__cabecalho {
-    flex: 0 0 auto;
-    position: relative;
-    height: 58px;
-    padding: 28px var(--margem) 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  flex: 0 0 auto;
+  position: relative;
+  height: 58px;
+  padding: 28px var(--margem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .carrossel__voltar {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 .carrossel__seta {
-    width: 28px;
-    height: auto;
-    display: block;
+  width: 28px;
+  height: auto;
+  display: block;
 }
 
 .carrossel__logo {
-    position: absolute;
-    left: 50%;
-    top: 28px;
-    transform: translateX(-50%);
-    height: 24px;
-    width: auto;
-    display: block;
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  height: 24px;
+  width: auto;
+  display: block;
 }
 
 .carrossel__pular {
-    background: none;
-    border: 0;
-    padding: 4px 0;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--cor-primaria);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-primaria);
 }
 
 /* ===== Faixa de slides (rolagem horizontal com "snap") ===== */
 .carrossel__faixa {
-    flex: 1 1 auto;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-    min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  min-height: 0;
 }
 
 .carrossel__faixa::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .carrossel__slide {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    padding: 4px var(--margem) 0;
-    overflow-y: auto;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 4px var(--margem) 0;
+  overflow-y: auto;
 }
 
 /* ===== Texto ===== */
 .carrossel__etiqueta {
-    margin-top: 30px;
-    font-size: 10px;
-    line-height: 15px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--verde-texto);
+  margin-top: 30px;
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verde-texto);
 }
 
 .carrossel__titulo {
-    margin-top: 8px;
-    font-size: 26px;
-    line-height: 33px;
-    font-weight: 400;
-    color: var(--cor-primaria);
+  margin-top: 8px;
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: 400;
+  color: var(--cor-primaria);
 }
 
 .carrossel__texto {
-    margin-top: 14px;
-    font-size: 13.5px;
-    line-height: 24px;
-    font-weight: 400;
-    color: var(--cor-texto);
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--cor-texto);
 }
 
 /* ===== Rodapé ===== */
 .carrossel__rodape {
-    flex: 0 0 auto;
-    padding: 0 var(--margem) 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  flex: 0 0 auto;
+  padding: 0 var(--margem) 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .carrossel__pontos {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .carrossel__ponto {
-    width: 8px;
-    height: 8px;
-    padding: 0;
-    border: 0;
-    border-radius: 99px;
-    background: var(--ponto-inativo);
-    cursor: pointer;
-    transition: width .25s, background .25s;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 99px;
+  background: var(--ponto-inativo);
+  cursor: pointer;
+  transition:
+    width 0.25s,
+    background 0.25s;
 }
 
 .carrossel__ponto.is-ativo {
-    width: 26px;
-    background: var(--cor-destaque);
+  width: 26px;
+  background: var(--cor-destaque);
 }
 
 .carrossel__botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 53px;
-    border-radius: 12px;
-    background: var(--cor-primaria);
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    box-shadow: 0 10px 24px rgba(8, 11, 120, .22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  border-radius: 12px;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 10px 24px rgba(8, 11, 120, 0.22);
 }
 
 .carrossel__dica {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 10px;
-    line-height: 14px;
-    color: var(--texto-suave);
+  margin-top: 12px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--texto-suave);
 }
 
 .carrossel__dica[hidden] {
-    display: none;
+  display: none;
 }
 
 /* ===== Ilustração (cartão com fundo degradê) ===== */
 .ilustracao {
-    position: relative;
-    overflow: hidden;
-    height: 279px;
-    border-radius: 24px;
-    background: var(--fundo-ilustracao);
+  position: relative;
+  overflow: hidden;
+  height: 279px;
+  border-radius: 24px;
+  background: var(--fundo-ilustracao);
 }
 
 .ilustracao__circulo-verde {
-    position: absolute;
-    left: -22px;
-    bottom: -34px;
-    width: 104px;
-    height: 104px;
-    border-radius: 50%;
-    background: #dcf4ea;
-    opacity: .9;
+  position: absolute;
+  left: -22px;
+  bottom: -34px;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: #dcf4ea;
+  opacity: 0.9;
 }
 
 .ilustracao__anel {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid #e3e8ef;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #e3e8ef;
 }
 
 .ilustracao__anel--topo {
-    right: -50px;
-    top: -60px;
-    width: 170px;
-    height: 170px;
+  right: -50px;
+  top: -60px;
+  width: 170px;
+  height: 170px;
 }
 
 .ilustracao__selo {
-    position: absolute;
-    left: 14px;
-    top: 14px;
-    width: 44px;
-    height: 44px;
-    background: #fff;
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
-    box-shadow: 0 4px 12px rgba(8, 11, 120, .08);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(8, 11, 120, 0.08);
 }
 
-.ilustracao>*:not(.ilustracao__circulo-verde):not(.ilustracao__anel):not(.ilustracao__selo) {
-    position: absolute;
+.ilustracao
+  > *:not(.ilustracao__circulo-verde):not(.ilustracao__anel):not(
+    .ilustracao__selo
+  ) {
+  position: absolute;
 }
 
 /* --- slide 1: fluxo Bulbe -> Sua conta --- */
 .fluxo {
-    left: 0;
-    right: 0;
-    top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 14px;
+  left: 0;
+  right: 0;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .fluxo__item {
-    width: 96px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .fluxo__icone {
-    width: 70px;
-    height: 70px;
-    border-radius: 22px 20px 24px 20px;
-    display: grid;
-    place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 22px 20px 24px 20px;
+  display: grid;
+  place-items: center;
 }
 
 .fluxo__icone--verde {
-    background: var(--cor-destaque);
-    transform: rotate(-4deg);
+  background: var(--cor-destaque);
+  transform: rotate(-4deg);
 }
 
 .fluxo__icone--azul {
-    background: var(--cor-primaria);
-    transform: rotate(5deg);
+  background: var(--cor-primaria);
+  transform: rotate(5deg);
 }
 
 .fluxo__titulo {
-    margin-top: 14px;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 600;
-    color: var(--cor-primaria);
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--cor-primaria);
 }
 
 .fluxo__sub {
-    font-size: 10px;
-    line-height: 14px;
-    color: var(--texto-suave);
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--texto-suave);
 }
 
 .fluxo__seta {
-    margin-top: 26px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    font-size: 8px;
-    color: var(--cor-destaque);
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  color: var(--cor-destaque);
 }
 
 /* --- slide 2: 15% --- */
 .desconto {
-    left: 50%;
-    top: 50%;
-    width: 140px;
-    height: 140px;
-    transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
 }
 
 .desconto__anel {
-    position: absolute;
-    border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
 }
 
 .desconto__anel--ext {
-    inset: -28px;
-    border: 1px dashed var(--cor-destaque);
-    opacity: .7;
+  inset: -28px;
+  border: 1px dashed var(--cor-destaque);
+  opacity: 0.7;
 }
 
 .desconto__anel--int {
-    inset: -14px;
-    border: 1px solid #d3d6ee;
+  inset: -14px;
+  border: 1px solid #d3d6ee;
 }
 
 .desconto__miolo {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: var(--cor-primaria);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--cor-primaria);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .desconto__ate {
-    font-size: 11px;
-    line-height: 14px;
+  font-size: 11px;
+  line-height: 14px;
 }
 
 .desconto__valor {
-    font-size: 34px;
-    line-height: 38px;
-    font-weight: 600;
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
 }
 
 .desconto__de {
-    font-size: 10px;
-    line-height: 14px;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .desconto__pilula {
-    position: absolute;
-    padding: 3px 9px;
-    border-radius: 99px;
-    background: #fff;
-    color: var(--verde-texto);
-    font-size: 8px;
-    line-height: 12px;
-    white-space: nowrap;
-    box-shadow: 0 3px 10px rgba(8, 11, 120, .1);
+  position: absolute;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: #fff;
+  color: var(--verde-texto);
+  font-size: 8px;
+  line-height: 12px;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(8, 11, 120, 0.1);
 }
 
 .desconto__pilula--a {
-    right: -64px;
-    top: -26px;
+  right: -64px;
+  top: -26px;
 }
 
 .desconto__pilula--b {
-    left: -52px;
-    bottom: -12px;
+  left: -52px;
+  bottom: -12px;
 }
 
 /* --- slide 3: até 90 dias --- */
 .prazo {
-    left: 0;
-    right: 0;
-    top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  left: 0;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prazo__cartao {
-    width: 82%;
-    border-radius: 14px;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: 0 8px 22px rgba(8, 11, 120, .1);
+  width: 82%;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(8, 11, 120, 0.1);
 }
 
 .prazo__topo {
-    background: var(--cor-primaria);
-    color: #fff;
-    text-align: center;
-    font-size: 8px;
-    line-height: 12px;
-    font-weight: 600;
-    letter-spacing: .06em;
-    padding: 9px 0;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-align: center;
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 9px 0;
 }
 
 .prazo__corpo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 22px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 0 24px;
 }
 
 .prazo__corpo strong {
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 600;
-    color: var(--cor-primaria);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--cor-primaria);
 }
 
 .prazo__etapas {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 7.5px;
-    color: var(--texto-suave);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 7.5px;
+  color: var(--texto-suave);
 }
 
 .prazo__etapas i {
-    display: block;
-    width: 26px;
-    height: 1px;
-    background: var(--cor-destaque);
+  display: block;
+  width: 26px;
+  height: 1px;
+  background: var(--cor-destaque);
 }
 
 /* --- slide 4: duas faturas --- */
 .faturas {
-    left: 0;
-    right: 0;
-    top: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  left: 0;
+  right: 0;
+  top: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .fatura {
-    width: 118px;
-    padding: 16px 12px 14px;
-    background: #fff;
-    border-radius: 14px;
-    border-top: 4px solid var(--cor-destaque);
-    box-shadow: 0 8px 20px rgba(8, 11, 120, .1);
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  width: 118px;
+  padding: 16px 12px 14px;
+  background: #fff;
+  border-radius: 14px;
+  border-top: 4px solid var(--cor-destaque);
+  box-shadow: 0 8px 20px rgba(8, 11, 120, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .fatura--cemig {
-    transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
 
 .fatura--bulbe {
-    transform: rotate(4deg);
-    margin-top: -10px;
+  transform: rotate(4deg);
+  margin-top: -10px;
 }
 
 .fatura strong {
-    margin-top: 18px;
-    font-size: 10px;
-    line-height: 14px;
-    color: var(--cor-primaria);
+  margin-top: 18px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--cor-primaria);
 }
 
 .fatura span {
-    font-size: 7.5px;
-    line-height: 10px;
-    color: var(--texto-suave);
+  font-size: 7.5px;
+  line-height: 10px;
+  color: var(--texto-suave);
 }
 
 .fatura__marca--cemig {
-    font-size: 14px;
-    line-height: 18px;
-    color: #1f8f4d;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1f8f4d;
 }
 
 .fatura__logo {
-    height: 14px;
-    width: auto;
-    align-self: flex-start;
+  height: 14px;
+  width: auto;
+  align-self: flex-start;
 }
 
 .faturas__mais {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--cor-primaria);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cor-primaria);
 }
 
 .faturas__selo {
-    left: 50%;
-    bottom: 22px;
-    transform: translateX(-50%);
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 10px;
-    border-radius: 99px;
-    background: #e5f7ee;
-    color: var(--verde-texto);
-    font-size: 8px;
-    line-height: 12px;
-    white-space: nowrap;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: #e5f7ee;
+  color: var(--verde-texto);
+  font-size: 8px;
+  line-height: 12px;
+  white-space: nowrap;
 }
 
 @media (min-width: 431px) {
-    body.pagina-carrossel {
-        padding: 24px 0;
-    }
+  body.pagina-carrossel {
+    padding: 24px 0;
+  }
 
-    .carrossel {
-        height: min(844px, calc(100dvh - 48px));
-        min-height: 0;
-        border-radius: 24px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
-    }
+  .carrossel {
+    height: min(844px, calc(100dvh - 48px));
+    min-height: 0;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
 }
-
-
-
 
 /* =====================================================
    PARTE 5 — US3
@@ -1258,16 +1273,7 @@ body.pagina-carrossel {
 /* Botões principais */
 
 .us3 .primary-button {
-  width: 100%;
-  min-height: 40px;
   margin-top: auto;
-  border: none;
-  border-radius: 5px;
-  background: var(--blue);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .us3 .primary-button:hover {
@@ -1364,8 +1370,6 @@ body.pagina-carrossel {
   }
 }
 
-
-
 /* =====================================================
    PARTE 6 — US4: ENVIO DA FATURA E CONTRATAÇÃO
 ===================================================== */
@@ -1396,13 +1400,6 @@ body.pagina-carrossel {
 }
 
 /* Cabeçalho */
-
-.us4 .back-button {
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
 
 .us4 .step-indicator {
   position: absolute;
@@ -1708,17 +1705,7 @@ body.pagina-carrossel {
 }
 
 .us4 .btn-primary {
-  width: 100%;
   height: 40px;
-  padding: 0 12px;
-  border: none;
-  border-radius: 5px;
-  background: var(--blue);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
   transition: opacity 0.2s;
 }
 
@@ -1732,8 +1719,6 @@ body.pagina-carrossel {
   outline: 2px solid var(--green);
   outline-offset: 3px;
 }
-
-
 
 /* =====================================================
    PARTE 7 — US5: ACOMPANHAMENTO DA ADESÃO
@@ -1830,19 +1815,9 @@ body.pagina-carrossel {
 /* Botão principal */
 
 .us5 #btn-acompanhar {
-  width: 100%;
   height: 40px;
   margin-top: auto;
   margin-bottom: 45px;
-  padding: 0 12px;
-  border: none;
-  border-radius: 5px;
-  background: var(--blue);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
 }
 
 .us5 #btn-acompanhar:hover {
@@ -1913,7 +1888,7 @@ body.pagina-carrossel {
 }
 
 .us5 .andamento .circulo {
-  border: 3px solid #1673f9;
+  border: 3px solid var(--blue);
   background: #edf5fc;
 }
 
@@ -1944,7 +1919,7 @@ body.pagina-carrossel {
   padding: 0;
   border: none;
   background: transparent;
-  color: #1673f9;
+  color: var(--blue);
   font-size: 12px;
   font-weight: 700;
   text-align: left;
@@ -1986,7 +1961,7 @@ body.pagina-carrossel {
 
 .us5 .dicas h3 {
   margin: 0 0 5px;
-  color: #1673f9;
+  color: var(--blue);
   font-size: 13px;
 }
 
