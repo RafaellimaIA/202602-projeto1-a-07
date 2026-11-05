@@ -12,6 +12,8 @@
   --border: #d8e4f2;
   --muted: #8195b2;
   --green: #009f70;
+  --screen-width: 375px;
+  --screen-max-height: 844px;
 }
 
 html {
@@ -25,6 +27,63 @@ body {
   color: var(--blue);
   font-family: Arial, Helvetica, sans-serif;
   background: #dedcdc;
+}
+
+body.pagina-inicial {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: #dedcdc;
+}
+
+.home-screen {
+  width: min(100%, var(--screen-width));
+  height: min(var(--screen-max-height), 100dvh);
+  min-height: min(var(--screen-max-height), 100dvh);
+  margin: 0 auto;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.home-screen img {
+  width: 150px;
+  height: auto;
+}
+
+.home-screen h1 {
+  margin: 32px 0 12px;
+  color: var(--blue);
+  font-size: clamp(1.7rem, 7vw, 2.3rem);
+}
+
+.home-screen p {
+  margin: 0 0 28px;
+  color: #526b8d;
+  line-height: 1.6;
+}
+
+.home-screen a {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-screen a:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
 }
 
 button,
@@ -89,12 +148,14 @@ button {
 
 .phone-screen {
   width: 100%;
-  max-width: 375px;
-  min-height: 667px;
+  max-width: var(--screen-width);
+  height: min(var(--screen-max-height), 100dvh);
+  min-height: min(var(--screen-max-height), 100dvh);
   margin: 0 auto;
   padding-bottom: 17px;
   background: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .success-banner {
@@ -418,7 +479,8 @@ button {
 
 @media (max-width: 374px) {
   .phone-screen {
-    min-height: 100vh;
+    height: min(var(--screen-max-height), 100dvh);
+    min-height: min(var(--screen-max-height), 100dvh);
   }
 
   .chat {
@@ -445,11 +507,13 @@ button {
 
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 430px;
-  min-height: 100vh;
-  min-height: 100dvh;
+  width: min(100%, var(--screen-width));
+  max-width: none;
+  height: min(var(--screen-max-height), 100dvh);
+  min-height: min(var(--screen-max-height), 100dvh);
   margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--acesso-branco);
   color: var(--acesso-texto);
   font-family:
@@ -631,7 +695,7 @@ body.pagina-carrossel {
 
   --fonte: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
   --margem: 26px;
-  --largura-max: 430px;
+  --largura-max: var(--screen-width);
 
   margin: 0;
   background: var(--cor-fundo);
@@ -646,9 +710,10 @@ body.pagina-carrossel {
 
 /* ===== Estrutura da tela ===== */
 .carrossel {
-  max-width: var(--largura-max);
-  min-height: 100dvh;
-  height: 100dvh;
+  width: min(100%, var(--screen-width));
+  max-width: none;
+  min-height: min(var(--screen-max-height), 100dvh);
+  height: min(var(--screen-max-height), 100dvh);
   margin: 0 auto;
   background: #fff;
   display: flex;
@@ -1137,12 +1202,12 @@ body.pagina-carrossel {
 
 @media (min-width: 431px) {
   body.pagina-carrossel {
-    padding: 24px 0;
+    padding: 0;
   }
 
   .carrossel {
-    height: min(844px, calc(100dvh - 48px));
-    min-height: 0;
+    height: min(var(--screen-max-height), 100dvh);
+    min-height: min(var(--screen-max-height), 100dvh);
     border-radius: 24px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   }
@@ -1156,11 +1221,14 @@ body.pagina-carrossel {
 /* Estrutura das telas */
 
 .phone-screen.us3 {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 0;
 }
 
 .us3 .screen {
-  min-height: 613px;
+  flex: 1 0 auto;
+  min-height: 0;
   padding: 22px 20px 12px;
   display: flex;
   flex-direction: column;
@@ -1357,7 +1425,8 @@ body.pagina-carrossel {
 
 @media (max-width: 374px) {
   .phone-screen.us3 {
-    min-height: 100vh;
+    height: min(var(--screen-max-height), 100dvh);
+    min-height: min(var(--screen-max-height), 100dvh);
   }
 
   .us3 .screen {
@@ -1377,8 +1446,7 @@ body.pagina-carrossel {
 /* Estrutura principal */
 
 .phone-screen.us4 {
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: min(var(--screen-max-height), 100dvh);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1727,10 +1795,10 @@ body.pagina-carrossel {
 /* Estrutura principal */
 
 .phone-screen.us5 {
-  max-width: 430px;
-  min-height: 100vh;
-  min-height: 100dvh;
+  max-width: var(--screen-width);
   padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Cabeçalho e indicador de etapa */
@@ -1767,8 +1835,7 @@ body.pagina-carrossel {
 /* Primeira tela */
 
 .us5 #tela1 {
-  min-height: calc(100vh - 55px);
-  min-height: calc(100dvh - 55px);
+  min-height: calc(100% - 55px);
   display: flex;
   flex-direction: column;
 }
@@ -1982,7 +2049,8 @@ body.pagina-carrossel {
 
 @media (max-width: 480px) {
   .phone-screen.us5 {
-    max-width: 100%;
+    width: 100%;
+    max-width: var(--screen-width);
   }
 
   .us5 .tela h1 {

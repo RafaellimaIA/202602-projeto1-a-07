@@ -30,7 +30,7 @@ voltar.addEventListener("click", function() {
     if (!tela2.hidden) {
         mostrarTela(2);
     } else {
-        window.location.href = "../index.html";
+        window.location.href = "US4.html";
     }
 });
 

@@ -11,7 +11,7 @@
     var atual = 0;
 
     var PAGINA_ANTERIOR = 'acesso.html';   // seta voltar no 1º slide
-    var PAGINA_CADASTRO = 'cadastro.html'; // botão "Criar minha conta"
+    var PAGINA_CADASTRO = 'US3T1.html'; // Cadastro (US3)
 
     function irPara(i) {
         i = Math.max(0, Math.min(total - 1, i));
