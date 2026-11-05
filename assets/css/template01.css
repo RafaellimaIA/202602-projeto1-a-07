@@ -1,0 +1,44 @@
+/* ==========================================================================
+   template01.css — só a divisão da tela: topo azul + painel branco
+   ========================================================================== */
+
+:root {
+    --tela-azul-topo: #0757bd;
+    --tela-branco: #ffffff;
+    --tela-fundo-pagina: #f5f5f5;
+    --tela-largura-max: 430px;
+    --tela-altura-topo: 318px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--tela-fundo-pagina);
+}
+
+.acesso {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--tela-largura-max);
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    background: var(--tela-branco);
+}
+
+.acesso__topo {
+    flex: 0 0 var(--tela-altura-topo);
+    height: var(--tela-altura-topo);
+    background: var(--tela-azul-topo);
+}
+
+.acesso__painel {
+    flex: 1 1 auto;
+    background: var(--tela-branco);
+}
