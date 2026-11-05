@@ -1,76 +1,7 @@
 /* =====================================================
-   PARTE 1 — TEMPLATE
-   Logo, seta de voltar e economia contratada com sucesso
+   CONFIGURAÇÕES GLOBAIS
+   Reset, variáveis e estilos básicos
 ===================================================== */
-
-.brand-header {
-  height: 51px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 3px solid #c9d7e2;
-}
-
-.brand-header {
-  width: 100%;
-  height: 55px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-bottom: 3px solid #c9d7e2;
-  box-sizing: border-box;
-}
-
-.brand-logo {
-  display: block;
-  width: 90px;
-  height: 35px;
-  object-fit: contain;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.back-button {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.back-button img {
-  display: block;
-  width: 53px;
-  height: 53px;
-  object-fit: contain;
-}
-
-.success-banner {
-  margin: 5px 11px 0;
-  min-height: 29px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  border-radius: 6px;
-  background: #e3f8ef;
-  color: #00996a;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-/* =====================================================
-   PARTE 2 — US1
-   Conteúdo da adesão e Assistente Bulbe
-===================================================== */
-
-/* Configurações gerais */
 
 * {
   box-sizing: border-box;
@@ -105,7 +36,56 @@ button {
   cursor: pointer;
 }
 
-/* Estrutura principal */
+/* =====================================================
+   PARTE 1 — TEMPLATE
+   Logo, seta de voltar e economia contratada com sucesso
+===================================================== */
+
+.brand-header {
+  width: 100%;
+  height: 55px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 3px solid #c9d7e2;
+  box-sizing: border-box;
+}
+
+.brand-logo {
+  display: block;
+  width: 90px;
+  height: 35px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.back-button img {
+  display: block;
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+}
+
+/* Estrutura compartilhada das telas */
 
 .phone-screen {
   width: 100%;
@@ -116,6 +96,43 @@ button {
   background: #fff;
   overflow: hidden;
 }
+
+.success-banner {
+  margin: 5px 11px 0;
+  min-height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  background: #e3f8ef;
+  color: #00996a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Botões principais — US3, US4 e US5 */
+
+.us3 .primary-button,
+.us4 .btn-primary,
+.us5 #btn-acompanhar {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =====================================================
+   PARTE 2 — US1
+   Conteúdo da adesão e Assistente Bulbe
+===================================================== */
 
 /* Logo e elementos gráficos */
 
@@ -162,7 +179,7 @@ button {
 
 /* Título principal */
 
-.phone-screen h1 {
+.us1 h1 {
   margin: 13px 14px 20px;
   font-size: 17px;
   line-height: 1.25;
@@ -409,13 +426,730 @@ button {
     padding-left: 11px;
   }
 
-  .phone-screen h1 {
+  .us1 h1 {
     font-size: 16px;
   }
 }
 
 /* =====================================================
-   PARTE 3 — US3
+   PARTE 3 — US2: TELA DE ACESSO
+   Estrutura, identidade visual e componentes de acesso
+===================================================== */
+
+/* Estrutura principal */
+
+.acesso {
+  --acesso-branco: #ffffff;
+  --acesso-texto: #526b8d;
+  --acesso-margem: 24px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--acesso-branco);
+  color: var(--acesso-texto);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Topo azul */
+
+.acesso__topo {
+  flex: 0 0 318px;
+  height: 318px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 101px var(--acesso-margem) 0;
+  background: var(--blue);
+  color: var(--acesso-branco);
+}
+
+/* Logotipo */
+
+.acesso__logo {
+  display: block;
+  height: 70px;
+  width: auto;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  color: var(--acesso-branco);
+}
+
+/* Slogan */
+
+.acesso__slogan {
+  margin: 3px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* Painel branco */
+
+.acesso__painel {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 34px var(--acesso-margem) 40px;
+  background: var(--acesso-branco);
+  color: var(--acesso-texto);
+}
+
+/* Título */
+
+.acesso__titulo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--acesso-texto);
+}
+
+/* Descrição */
+
+.acesso__descricao {
+  margin: 11px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* Botões de acesso */
+
+.acesso__botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 43px;
+  border: 0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Botão principal: Entrar */
+
+.acesso__botao--primario {
+  margin-top: 22px;
+  background: var(--blue);
+  color: var(--acesso-branco);
+}
+
+/* Botão secundário: Primeiro acesso */
+
+.acesso__botao--secundario {
+  margin-top: 14px;
+  background: var(--acesso-branco);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px var(--border);
+  color: var(--blue);
+}
+
+/* Acessibilidade */
+
+.acesso__botao:focus-visible,
+.acesso__link:focus-visible {
+  outline: 3px solid rgba(23, 19, 155, 0.4);
+  outline-offset: 3px;
+}
+
+/* Legendas dos botões */
+
+.acesso__legenda {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+/* Pergunta inferior */
+
+.acesso__pergunta {
+  margin: 29px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+/* Link: Quero economizar */
+
+.acesso__link {
+  display: block;
+  width: fit-content;
+  margin: 8px auto 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.acesso__link:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   PARTE 4 — US2: CARROSSEL
+   Onboarding e apresentação da Bulbe
+===================================================== */
+
+body.pagina-carrossel {
+  /* Identidade visual padronizada */
+  --cor-primaria: var(--blue);
+  --cor-destaque: var(--green);
+  --verde-texto: var(--green);
+
+  /* Cores e propriedades específicas */
+  --cor-texto: #252e4f;
+  --texto-suave: #7d8296;
+  --ponto-inativo: #cbd1dc;
+  --cor-fundo: #f7f9fc;
+  --fundo-ilustracao: linear-gradient(
+    180deg,
+    #f5f8fe 0%,
+    #f6fbfb 55%,
+    #f2faf7 100%
+  );
+
+  --fonte: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --margem: 26px;
+  --largura-max: 430px;
+
+  margin: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte);
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(.pagina-carrossel) :where(p, h1) {
+  margin: 0;
+}
+
+/* ===== Estrutura da tela ===== */
+.carrossel {
+  max-width: var(--largura-max);
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== Cabeçalho ===== */
+.carrossel__cabecalho {
+  flex: 0 0 auto;
+  position: relative;
+  height: 58px;
+  padding: 28px var(--margem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carrossel__voltar {
+  display: inline-flex;
+  align-items: center;
+}
+
+.carrossel__seta {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+.carrossel__logo {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.carrossel__pular {
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+/* ===== Faixa de slides (rolagem horizontal com "snap") ===== */
+.carrossel__faixa {
+  flex: 1 1 auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  min-height: 0;
+}
+
+.carrossel__faixa::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 4px var(--margem) 0;
+  overflow-y: auto;
+}
+
+/* ===== Texto ===== */
+.carrossel__etiqueta {
+  margin-top: 30px;
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verde-texto);
+}
+
+.carrossel__titulo {
+  margin-top: 8px;
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: 400;
+  color: var(--cor-primaria);
+}
+
+.carrossel__texto {
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--cor-texto);
+}
+
+/* ===== Rodapé ===== */
+.carrossel__rodape {
+  flex: 0 0 auto;
+  padding: 0 var(--margem) 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.carrossel__pontos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.carrossel__ponto {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 99px;
+  background: var(--ponto-inativo);
+  cursor: pointer;
+  transition:
+    width 0.25s,
+    background 0.25s;
+}
+
+.carrossel__ponto.is-ativo {
+  width: 26px;
+  background: var(--cor-destaque);
+}
+
+.carrossel__botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  border-radius: 12px;
+  background: var(--cor-primaria);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 10px 24px rgba(8, 11, 120, 0.22);
+}
+
+.carrossel__dica {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--texto-suave);
+}
+
+.carrossel__dica[hidden] {
+  display: none;
+}
+
+/* ===== Ilustração (cartão com fundo degradê) ===== */
+.ilustracao {
+  position: relative;
+  overflow: hidden;
+  height: 279px;
+  border-radius: 24px;
+  background: var(--fundo-ilustracao);
+}
+
+.ilustracao__circulo-verde {
+  position: absolute;
+  left: -22px;
+  bottom: -34px;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: #dcf4ea;
+  opacity: 0.9;
+}
+
+.ilustracao__anel {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #e3e8ef;
+}
+
+.ilustracao__anel--topo {
+  right: -50px;
+  top: -60px;
+  width: 170px;
+  height: 170px;
+}
+
+.ilustracao__selo {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(8, 11, 120, 0.08);
+}
+
+.ilustracao
+  > *:not(.ilustracao__circulo-verde):not(.ilustracao__anel):not(
+    .ilustracao__selo
+  ) {
+  position: absolute;
+}
+
+/* --- slide 1: fluxo Bulbe -> Sua conta --- */
+.fluxo {
+  left: 0;
+  right: 0;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.fluxo__item {
+  width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fluxo__icone {
+  width: 70px;
+  height: 70px;
+  border-radius: 22px 20px 24px 20px;
+  display: grid;
+  place-items: center;
+}
+
+.fluxo__icone--verde {
+  background: var(--cor-destaque);
+  transform: rotate(-4deg);
+}
+
+.fluxo__icone--azul {
+  background: var(--cor-primaria);
+  transform: rotate(5deg);
+}
+
+.fluxo__titulo {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.fluxo__sub {
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--texto-suave);
+}
+
+.fluxo__seta {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  color: var(--cor-destaque);
+}
+
+/* --- slide 2: 15% --- */
+.desconto {
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.desconto__anel {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.desconto__anel--ext {
+  inset: -28px;
+  border: 1px dashed var(--cor-destaque);
+  opacity: 0.7;
+}
+
+.desconto__anel--int {
+  inset: -14px;
+  border: 1px solid #d3d6ee;
+}
+
+.desconto__miolo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--cor-primaria);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.desconto__ate {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.desconto__valor {
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+.desconto__de {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.desconto__pilula {
+  position: absolute;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: #fff;
+  color: var(--verde-texto);
+  font-size: 8px;
+  line-height: 12px;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(8, 11, 120, 0.1);
+}
+
+.desconto__pilula--a {
+  right: -64px;
+  top: -26px;
+}
+
+.desconto__pilula--b {
+  left: -52px;
+  bottom: -12px;
+}
+
+/* --- slide 3: até 90 dias --- */
+.prazo {
+  left: 0;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prazo__cartao {
+  width: 82%;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(8, 11, 120, 0.1);
+}
+
+.prazo__topo {
+  background: var(--cor-primaria);
+  color: #fff;
+  text-align: center;
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 9px 0;
+}
+
+.prazo__corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 0 24px;
+}
+
+.prazo__corpo strong {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.prazo__etapas {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 7.5px;
+  color: var(--texto-suave);
+}
+
+.prazo__etapas i {
+  display: block;
+  width: 26px;
+  height: 1px;
+  background: var(--cor-destaque);
+}
+
+/* --- slide 4: duas faturas --- */
+.faturas {
+  left: 0;
+  right: 0;
+  top: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.fatura {
+  width: 118px;
+  padding: 16px 12px 14px;
+  background: #fff;
+  border-radius: 14px;
+  border-top: 4px solid var(--cor-destaque);
+  box-shadow: 0 8px 20px rgba(8, 11, 120, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fatura--cemig {
+  transform: rotate(-4deg);
+}
+
+.fatura--bulbe {
+  transform: rotate(4deg);
+  margin-top: -10px;
+}
+
+.fatura strong {
+  margin-top: 18px;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--cor-primaria);
+}
+
+.fatura span {
+  font-size: 7.5px;
+  line-height: 10px;
+  color: var(--texto-suave);
+}
+
+.fatura__marca--cemig {
+  font-size: 14px;
+  line-height: 18px;
+  color: #1f8f4d;
+}
+
+.fatura__logo {
+  height: 14px;
+  width: auto;
+  align-self: flex-start;
+}
+
+.faturas__mais {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.faturas__selo {
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: #e5f7ee;
+  color: var(--verde-texto);
+  font-size: 8px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+@media (min-width: 431px) {
+  body.pagina-carrossel {
+    padding: 24px 0;
+  }
+
+  .carrossel {
+    height: min(844px, calc(100dvh - 48px));
+    min-height: 0;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* =====================================================
+   PARTE 5 — US3
    Cadastro e titularidade da conta de luz
 ===================================================== */
 
@@ -539,16 +1273,7 @@ button {
 /* Botões principais */
 
 .us3 .primary-button {
-  width: 100%;
-  min-height: 40px;
   margin-top: auto;
-  border: none;
-  border-radius: 5px;
-  background: var(--blue);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .us3 .primary-button:hover {
@@ -642,5 +1367,629 @@ button {
 
   .phone-screen.us3 h1 {
     font-size: 17px;
+  }
+}
+
+/* =====================================================
+   PARTE 6 — US4: ENVIO DA FATURA E CONTRATAÇÃO
+===================================================== */
+
+/* Estrutura principal */
+
+.phone-screen.us4 {
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Barra de progresso */
+
+.us4 .progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+}
+
+.us4 .progress-bar {
+  height: 100%;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+/* Cabeçalho */
+
+.us4 .step-indicator {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Controle das três etapas */
+
+.us4 .screen-step {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+}
+
+.us4 .screen-step.active {
+  display: flex;
+}
+
+/* Conteúdo */
+
+.us4 .content-wrapper {
+  flex: 1;
+  padding: 10px 16px 20px;
+}
+
+.us4 .page-title {
+  margin: 12px 0 6px;
+  color: var(--blue);
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+}
+
+.us4 .help-link-text {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.us4 .inline-link {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.us4 .description-text {
+  margin-bottom: 20px;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Upload da fatura */
+
+.us4 .upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 14px;
+  border: 1.5px dashed #a5b4fc;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.us4 .upload-dropzone:hover {
+  background: #f8fafc;
+}
+
+.us4 .upload-icon-box {
+  margin-bottom: 8px;
+}
+
+.us4 .upload-text {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.us4 .upload-subtext {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.us4 .file-name-preview {
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Cartões informativos */
+
+.us4 .info-card {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #edf5fc;
+}
+
+.us4 .info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.us4 .info-card-list {
+  padding-left: 18px;
+  color: #526b8d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Termos de contratação */
+
+.us4 .terms-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.us4 .term-accordion {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.us4 .term-accordion[open] {
+  border-color: #a5b4fc;
+}
+
+.us4 .term-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.us4 .term-row::-webkit-details-marker {
+  display: none;
+}
+
+.us4 .term-row .arrow-right {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.us4 .term-accordion[open] .arrow-right {
+  transform: rotate(90deg);
+  color: var(--blue);
+}
+
+.us4 .term-content {
+  padding: 0 14px 12px;
+  border-top: 1px solid #edf2f7;
+  background: #fcfdfe;
+}
+
+.us4 .term-content p {
+  margin-top: 8px;
+  color: #526b8d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Checkbox personalizado */
+
+.us4 .checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.us4 .checkbox-container input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.us4 .custom-checkbox {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.us4 .checkbox-container input:checked ~ .custom-checkbox {
+  background: var(--blue);
+}
+
+.us4 .checkbox-container input:checked ~ .custom-checkbox::after {
+  content: "✓";
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  color: #fff;
+  font-size: 11px;
+}
+
+.us4 .checkbox-container input:focus-visible ~ .custom-checkbox {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.us4 .checkbox-label {
+  color: #526b8d;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* Etapa de confirmação */
+
+/* Reaproveita .success-banner do template compartilhado */
+
+.us4 .success-banner {
+  margin: 5px 0 0;
+}
+
+/* Reaproveita .important-box, ajustando somente
+   as dimensões necessárias à US4 */
+
+.us4 .important-box {
+  margin: 18px 0 0;
+  min-height: 72px;
+  padding: 11px;
+}
+
+.us4 .important-box strong {
+  font-size: 10px;
+}
+
+.us4 .important-box p {
+  max-width: none;
+  font-size: 11px;
+}
+
+/* Botão de ajuda */
+
+.us4 .floating-help {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.us4 .help-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Rodapé e botão principal */
+
+.us4 .footer-action {
+  margin-top: auto;
+  padding: 12px 16px 16px;
+  background: #fff;
+}
+
+.us4 .btn-primary {
+  height: 40px;
+  transition: opacity 0.2s;
+}
+
+.us4 .btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.us4 .btn-primary:focus-visible,
+.us4 .help-pill:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* =====================================================
+   PARTE 7 — US5: ACOMPANHAMENTO DA ADESÃO
+===================================================== */
+
+/* Estrutura principal */
+
+.phone-screen.us5 {
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: 0;
+}
+
+/* Cabeçalho e indicador de etapa */
+
+.us5 .etapa {
+  position: absolute;
+  right: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Conteúdo das telas */
+
+.us5 .tela {
+  padding: 15px;
+}
+
+.us5 .tela h1 {
+  margin: 0 0 25px;
+  color: var(--blue);
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.us5 .descricao {
+  margin: 0;
+  color: #526b8d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Primeira tela */
+
+.us5 #tela1 {
+  min-height: calc(100vh - 55px);
+  min-height: calc(100dvh - 55px);
+  display: flex;
+  flex-direction: column;
+}
+
+.us5 .cartoes {
+  margin-top: 65px;
+}
+
+/* Cartões informativos */
+
+.us5 .informacao {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 7px;
+  background: #edf5fc;
+}
+
+.us5 .informacao h3 {
+  margin: 0 0 8px;
+  color: #435774;
+  font-size: 13px;
+}
+
+.us5 .icone {
+  margin-right: 5px;
+  color: var(--blue);
+  font-size: 18px;
+}
+
+.us5 .informacao h2 {
+  margin: 10px 0;
+  color: var(--blue);
+  font-size: 20px;
+  text-align: center;
+}
+
+.us5 .informacao p {
+  margin: 5px 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Botão principal */
+
+.us5 #btn-acompanhar {
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: 45px;
+}
+
+.us5 #btn-acompanhar:hover {
+  background: #100d79;
+}
+
+.us5 #btn-acompanhar:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Segunda tela — acompanhamento */
+
+.us5 .acompanhamento {
+  margin-top: 15px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  background: #edf5fc;
+}
+
+/* Etapas da linha do tempo */
+
+.us5 .passo {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.us5 .passo:last-child {
+  padding-bottom: 0;
+}
+
+/* Linha vertical */
+
+.us5 .passo:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  bottom: 0;
+  width: 2px;
+  background: #b5c4d3;
+}
+
+.us5 .passo.concluido::before {
+  background: var(--green);
+}
+
+/* Círculos de progresso */
+
+.us5 .circulo {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #b5c4d3;
+}
+
+.us5 .concluido .circulo {
+  background: var(--green);
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.us5 .andamento .circulo {
+  border: 3px solid var(--blue);
+  background: #edf5fc;
+}
+
+/* Conteúdo de cada etapa */
+
+.us5 .conteudo-passo {
+  flex: 1;
+  min-width: 0;
+}
+
+.us5 .conteudo-passo h3 {
+  margin: 2px 0 5px;
+  color: #435774;
+  font-size: 13px;
+}
+
+.us5 .conteudo-passo p {
+  margin: 5px 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Explicações expansíveis */
+
+.us5 .detalhes {
+  display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.us5 .detalhes:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Status da etapa */
+
+.us5 .status {
+  display: table;
+  margin: 5px 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #d9e6ff;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.us5 .conteudo-passo .explicacao {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+/* Cartão de dicas */
+
+.us5 .dicas {
+  margin-top: 40px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #edf5fc;
+}
+
+.us5 .dicas h3 {
+  margin: 0 0 5px;
+  color: var(--blue);
+  font-size: 13px;
+}
+
+.us5 .dicas p {
+  margin: 0;
+  color: #526b8d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Visibilidade das telas e explicações */
+
+.us5 [hidden] {
+  display: none !important;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+  .phone-screen.us5 {
+    max-width: 100%;
+  }
+
+  .us5 .tela h1 {
+    font-size: 21px;
+  }
+
+  .us5 .cartoes {
+    margin-top: 45px;
   }
 }
