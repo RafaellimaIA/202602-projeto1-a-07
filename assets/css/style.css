@@ -467,7 +467,6 @@ button {
   font-weight: 700;
   line-height: 65px;
   color: var(--acesso-branco);
-  filter: brightness(0) invert(1);
 }
 
 /* Slogan */
