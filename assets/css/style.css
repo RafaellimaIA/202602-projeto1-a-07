@@ -732,17 +732,6 @@ body.pagina-carrossel {
   justify-content: space-between;
 }
 
-.carrossel__voltar {
-  display: inline-flex;
-  align-items: center;
-}
-
-.carrossel__seta {
-  width: 28px;
-  height: auto;
-  display: block;
-}
-
 .carrossel__logo {
   position: absolute;
   left: 50%;
