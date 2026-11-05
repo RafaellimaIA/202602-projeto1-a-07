@@ -47,6 +47,13 @@ document.getElementById("voltar").addEventListener("click", (evento) => {
   if (!tela2.hidden) {
     evento.preventDefault();
     mostrarEtapa(1);
+  } else if (
+    document.referrer &&
+    new URL(document.referrer).origin === location.origin &&
+    /\/(acesso|carrossel)\.html$/.test(new URL(document.referrer).pathname)
+  ) {
+    evento.preventDefault();
+    history.back();
   }
 });
 
@@ -153,7 +160,7 @@ document.getElementById("proximo2").addEventListener("click", () => {
     localStorage.removeItem("cadastroBulbe");
   }
 
-  alert("Dados validados! A etapa 3 ainda não foi implementada.");
+  window.location.href = "US4.html";
 });
 
 // RECUPERAR DADOS SALVOS

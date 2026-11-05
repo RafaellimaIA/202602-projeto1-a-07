@@ -2,8 +2,8 @@
 (function () {
     // >>> Ajuste aqui os nomes das páginas das outras telas (arquivos dentro de pages/) <<<
     var ROTAS = {
-        entrar: 'login.html',            // "Entrar" (cliente que já tem cadastro)
-        primeiroAcesso: 'contato.html',  // "Primeiro acesso" (HU01/HU02 - tela de contato)
+        entrar: null,                    // Login ainda não implementado
+        primeiroAcesso: 'US3T1.html',    // Cadastro (US3)
         economizar: 'carrossel.html'     // "Quero economizar" (quem ainda não é cliente)
     };
 
@@ -28,10 +28,15 @@
     function ligar(chave) {
         var el = botoes[chave];
         if (!el) return;
-        el.setAttribute('href', ROTAS[chave]);
+        if (ROTAS[chave]) el.setAttribute('href', ROTAS[chave]);
+        else el.removeAttribute('href');
         el.addEventListener('click', function (e) {
             e.preventDefault();
             var destino = ROTAS[chave];
+            if (!destino) {
+                avisar('A tela de acesso de clientes ainda não está disponível.');
+                return;
+            }
             // Confere se a página existe antes de navegar
             fetch(destino, { method: 'HEAD' })
                 .then(function (r) {

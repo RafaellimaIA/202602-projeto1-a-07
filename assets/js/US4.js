@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (currentStep === 2) {
         goToStep(1); // Volta da etapa 2 para a etapa 1
       } else if (currentStep === 1) {
-        window.location.href = "../index.html"; // Sai do fluxo
+        window.location.href = "US3T1.html"; // Retorna ao cadastro
       }
     });
   }
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnTrack = document.getElementById("btnTrack");
   if (btnTrack) {
     btnTrack.addEventListener("click", () => {
-      alert("Redirecionando para acompanhamento...");
+      window.location.href = "US5.html";
     });
   }
 });
