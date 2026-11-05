@@ -1801,6 +1801,14 @@ body.pagina-carrossel {
   flex-direction: column;
 }
 
+/* Mantém o retorno e a marca acessíveis durante a rolagem do acompanhamento. */
+.us5 .brand-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  flex: 0 0 55px;
+}
+
 /* Cabeçalho e indicador de etapa */
 
 .us5 .etapa {
@@ -1816,8 +1824,13 @@ body.pagina-carrossel {
   padding: 15px;
 }
 
+.us5 #tela2 {
+  padding-top: 18px;
+  padding-bottom: 24px;
+}
+
 .us5 .tela h1 {
-  margin: 0 0 25px;
+  margin: 0 0 16px;
   color: var(--blue);
   font-size: 23px;
   line-height: 1.2;
@@ -1899,7 +1912,7 @@ body.pagina-carrossel {
 /* Segunda tela — acompanhamento */
 
 .us5 .acompanhamento {
-  margin-top: 15px;
+  margin-top: 12px;
   padding: 20px 15px;
   border-radius: 8px;
   background: #edf5fc;
@@ -2020,7 +2033,7 @@ body.pagina-carrossel {
 /* Cartão de dicas */
 
 .us5 .dicas {
-  margin-top: 40px;
+  margin-top: 24px;
   padding: 12px;
   border-radius: 7px;
   background: #edf5fc;
