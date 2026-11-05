@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento da adesão - Bulbe</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/US5.css">
+</head>
+<body>
+    <main class="phone-screen">
+
+        <header class="brand-header">
+            <button class="back-button" id="btn-voltar" type="button" aria-label="Voltar">
+                <img src="../assets/img/seta.png" alt="">
+            </button>
+
+            <img src="../assets/img/logo.svg" alt="Bulbe" class="brand-logo">
+
+            <span class="etapa" id="numero-etapa">2/3</span>
+        </header>
+
+        <!-- PRIMEIRA TELA -->
+        <section id="tela1" class="tela">
+            <h1>Acompanhe o processo<br>em tempo real</h1>
+
+            <p class="descricao">
+                Agora você pode acompanhar o processo da sua
+                adesão até a ativação do desconto.
+            </p>
+
+            <div class="cartoes">
+                <div class="informacao">
+                    <h3><span class="icone">▦</span> Previsão de início da economia</h3>
+                    <h2>Em até 90 dias</h2>
+                    <p>
+                        Esse é o prazo médio de ativação junto à
+                        distribuidora de energia (Cemig).
+                    </p>
+                </div>
+
+                <div class="informacao">
+                    <h3><span class="icone">▤</span> Enquanto isso</h3>
+                    <p>
+                        Você receberá atualizações sobre a sua
+                        adesão por e-mail e WhatsApp informados.
+                    </p>
+                </div>
+            </div>
+
+            <button id="btn-acompanhar" type="button">
+                Acompanhar minha adesão
+            </button>
+        </section>
+
+        <!-- SEGUNDA TELA -->
+        <section id="tela2" class="tela" hidden>
+            <h1>Acompanhe o processo<br>em tempo real</h1>
+
+            <p class="descricao">
+                Veja o andamento do seu processo e
+                entenda o que acontece em cada etapa.
+            </p>
+
+            <div class="acompanhamento">
+
+                <div class="passo concluido">
+                    <div class="circulo">✓</div>
+                    <div class="conteudo-passo">
+                        <h3>Contrato confirmado</h3>
+                        <p>Seu contrato foi assinado com sucesso.</p>
+                        <button class="detalhes" type="button" aria-expanded="false">
+                            O que acontece agora?
+                        </button>
+                        <p class="explicacao" hidden>
+                            Seu contrato foi confirmado e será
+                            encaminhado para processamento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="passo andamento">
+                    <div class="circulo"></div>
+                    <div class="conteudo-passo">
+                        <h3>Processamento pela Cemig</h3>
+                        <span class="status">Em andamento</span>
+                        <p>Estamos enviando seus dados para a Cemig.</p>
+                        <button class="detalhes" type="button" aria-expanded="true">
+                            O que acontece agora?
+                        </button>
+                        <p class="explicacao">
+                            A etapa será concluída quando os dados
+                            forem processados pela distribuidora.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="passo pendente">
+                    <div class="circulo"></div>
+                    <div class="conteudo-passo">
+                        <h3>Desconto ativado</h3>
+                        <p>Previsão: conforme processamento.</p>
+                        <button class="detalhes" type="button" aria-expanded="false">
+                            O que acontece agora?
+                        </button>
+                        <p class="explicacao" hidden>
+                            O desconto será ativado depois
+                            da conclusão do processamento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="passo pendente">
+                    <div class="circulo"></div>
+                    <div class="conteudo-passo">
+                        <h3>Primeira fatura com desconto</h3>
+                        <p>Você verá o desconto quando for aplicado.</p>
+                        <button class="detalhes" type="button" aria-expanded="false">
+                            O que acontece agora?
+                        </button>
+                        <p class="explicacao" hidden>
+                            O desconto aparecerá na sua fatura
+                            após a ativação.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dicas">
+                <h3>Dicas para sua adesão</h3>
+                <p>
+                    Mantenha seu e-mail e telefone atualizados
+                    para receber avisos sobre o andamento.
+                    Consulte esta tela sempre que precisar.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../assets/js/US5.js"></script>
+</body>
+</html>
