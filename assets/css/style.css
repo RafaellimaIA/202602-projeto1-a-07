@@ -65,6 +65,8 @@
   font-weight: 700;
 }
 
+
+
 /* =====================================================
    PARTE 2 — US1
    Conteúdo da adesão e Assistente Bulbe
@@ -414,8 +416,182 @@ button {
   }
 }
 
+
+
 /* =====================================================
-   PARTE 3 — US3
+   PARTE 3 — US2: TELA DE ACESSO
+   Estrutura, identidade visual e componentes de acesso
+===================================================== */
+
+/* Estrutura principal */
+
+.acesso {
+  --acesso-branco: #ffffff;
+  --acesso-texto: #526b8d;
+  --acesso-margem: 24px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--acesso-branco);
+  color: var(--acesso-texto);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Topo azul */
+
+.acesso__topo {
+  flex: 0 0 318px;
+  height: 318px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 101px var(--acesso-margem) 0;
+  background: var(--blue);
+  color: var(--acesso-branco);
+}
+
+/* Logotipo */
+
+.acesso__logo {
+  display: block;
+  height: 70px;
+  width: auto;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  color: var(--acesso-branco);
+  filter: brightness(0) invert(1);
+}
+
+/* Slogan */
+
+.acesso__slogan {
+  margin: 3px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* Painel branco */
+
+.acesso__painel {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 34px var(--acesso-margem) 40px;
+  background: var(--acesso-branco);
+  color: var(--acesso-texto);
+}
+
+/* Título */
+
+.acesso__titulo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--acesso-texto);
+}
+
+/* Descrição */
+
+.acesso__descricao {
+  margin: 11px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* Botões de acesso */
+
+.acesso__botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 43px;
+  border: 0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Botão principal: Entrar */
+
+.acesso__botao--primario {
+  margin-top: 22px;
+  background: var(--blue);
+  color: var(--acesso-branco);
+}
+
+/* Botão secundário: Primeiro acesso */
+
+.acesso__botao--secundario {
+  margin-top: 14px;
+  background: var(--acesso-branco);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px var(--border);
+  color: var(--blue);
+}
+
+/* Acessibilidade */
+
+.acesso__botao:focus-visible,
+.acesso__link:focus-visible {
+  outline: 3px solid rgba(23, 19, 155, 0.4);
+  outline-offset: 3px;
+}
+
+/* Legendas dos botões */
+
+.acesso__legenda {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+/* Pergunta inferior */
+
+.acesso__pergunta {
+  margin: 29px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+/* Link: Quero economizar */
+
+.acesso__link {
+  display: block;
+  width: fit-content;
+  margin: 8px auto 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.acesso__link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =====================================================
+   PARTE 4 — US3
    Cadastro e titularidade da conta de luz
 ===================================================== */
 
