@@ -4,7 +4,7 @@
 
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como [persona], quero [ação] para [benefício]. | [ ] | [alta/média/baixa] | #[ ] |
+| HU04 | Como Sérgio Carlos, usuário da Bulbe, quero receber uma confirmação clara da minha contratação para ter segurança de que meu cadastro foi concluído. [média] | #[15]
 
 ## Critérios de aceite
 

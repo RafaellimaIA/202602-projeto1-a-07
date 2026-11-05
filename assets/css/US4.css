@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #17139b;
+  --border: #d8e4f2;
+  --muted: #8195b2;
+  --green: #009f70;
+}
+
+html {
+  min-width: 320px;
+  background: #dedcdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--blue);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dedcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.phone-screen {
+  width: 100%;
+  max-width: 375px;
+  min-height: 667px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Barra de progresso verde */
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #e5e7eb;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #00b98b;
+  transition: width 0.3s ease;
+}
+
+/* Cabeçalho Oficial */
+.brand-header {
+  width: 100%;
+  height: 55px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 3px solid #c9d7e2;
+  box-sizing: border-box;
+}
+
+/* Botão da Seta (imagem seta.png) */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.back-button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Logo Oficial (imagem logo.svg) */
+.brand-logo {
+  display: block;
+  width: 95px;
+  height: 35px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Indicador de passos à direita */
+.step-indicator {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  color: #71717a;
+}
+
+/* Controle de Telas (SPA) */
+.screen-step {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+
+.screen-step.active {
+  display: flex;
+}
+
+/* Conteúdo */
+.content-wrapper {
+  flex: 1;
+  padding: 10px 16px 20px 16px;
+}
+
+.page-title {
+  color: var(--blue);
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+.help-link-text {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.inline-link {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.description-text {
+  font-size: 12px;
+  color: #526b8d;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Upload de Arquivo */
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed #a5b4fc;
+  border-radius: 8px;
+  padding: 28px 14px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.upload-dropzone:hover {
+  background-color: #f8fafc;
+}
+
+.upload-icon-box {
+  margin-bottom: 8px;
+}
+
+.upload-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.upload-subtext {
+  font-size: 10px;
+  color: #8ca0bd;
+  margin-top: 4px;
+}
+
+.file-name-preview {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #00996a;
+  font-weight: 600;
+}
+
+/* Cartões Informativos */
+.info-card {
+  background-color: #edf5fc;
+  border-radius: 7px;
+  padding: 12px;
+  margin-top: 18px;
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.info-card-list {
+  padding-left: 18px;
+  font-size: 11px;
+  color: #526b8d;
+  line-height: 1.5;
+}
+
+/* Acordeão de Termos */
+.terms-group {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.term-accordion {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.term-accordion[open] {
+  border-color: #a5b4fc;
+}
+
+.term-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  list-style: none; /* Remove a setinha padrão do navegador */
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  user-select: none;
+}
+
+.term-row::-webkit-details-marker {
+  display: none;
+}
+
+.term-row .arrow-right {
+  color: var(--muted);
+  font-size: 16px;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+/* Gira a seta para baixo quando o item é aberto */
+.term-accordion[open] .arrow-right {
+  transform: rotate(90deg);
+  color: var(--blue);
+}
+
+/* Área de texto interno */
+.term-content {
+  padding: 0 14px 12px 14px;
+  border-top: 1px solid #edf2f7;
+  background-color: #fcfdfe;
+}
+
+.term-content p {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #526b8d;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-top: 2px;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: var(--blue);
+}
+
+.checkbox-container input:checked ~ .custom-checkbox::after {
+  content: "✓";
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  left: 3px;
+  top: -1px;
+}
+
+.checkbox-label {
+  font-size: 11px;
+  color: #526b8d;
+  line-height: 1.35;
+}
+
+/* Sucesso */
+.success-banner {
+  margin: 5px 0 0;
+  min-height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  background: #e3f8ef;
+  color: #00996a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.important-box {
+  margin-top: 18px;
+  min-height: 72px;
+  padding: 11px;
+  border-radius: 7px;
+  background: #edf5fc;
+  color: #526b8d;
+}
+
+.important-box strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: var(--blue);
+}
+
+.important-box p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* Balão de Ajuda posicionado dentro do fluxo da tela */
+.floating-help {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.help-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  cursor: pointer;
+}
+/* Rodapé / Botão */
+.footer-action {
+  margin-top: auto;
+  padding: 12px 16px 16px;
+  background-color: #fff;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
