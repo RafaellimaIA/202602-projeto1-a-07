@@ -32,11 +32,22 @@
 </main><script src="../assets/js/US1T1.js"></script>
 <script>
   const assistantBack = document.getElementById('btn-back-assistant');
-  if (document.referrer && new URL(document.referrer).origin === location.origin) {
+  const returnUrl = new URLSearchParams(location.search).get('return');
+  const sameOriginReturn = (value) => {
+    if (!value) return false;
+    try { return new URL(value).origin === location.origin; }
+    catch { return false; }
+  };
+  const safeReturnUrl = sameOriginReturn(returnUrl) ? returnUrl : document.referrer;
+
+  if (sameOriginReturn(safeReturnUrl)) {
     assistantBack.addEventListener('click', event => {
       event.preventDefault();
-      history.back();
+      if (document.referrer && sameOriginReturn(document.referrer) && history.length > 1) history.back();
+      else if (sameOriginReturn(safeReturnUrl)) location.assign(safeReturnUrl);
+      else location.assign('acesso.html');
     });
   }
 </script>
+<script src="../assets/js/navigation.js"></script>
 </body></html>
