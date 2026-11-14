@@ -1442,6 +1442,23 @@ body.pagina-carrossel {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
+/* Keep the confirmation content visible and scrollable on short screens. */
+.phone-screen.us4.is-confirmation {
+  height: min(var(--screen-max-height), 100dvh);
+  min-height: min(var(--screen-max-height), 100dvh);
+  padding-bottom: 8px;
+  overflow-y: auto;
+}
+
+.us4 .brand-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  flex: 0 0 55px;
+}
+
+.us4.is-confirmation .brand-header { position: relative; top: auto; }
+
 /* Barra de progresso */
 
 .us4 .progress-bar-container {
@@ -1478,14 +1495,19 @@ body.pagina-carrossel {
 
 .us4 .screen-step.active {
   display: flex;
+  flex: 0 0 auto;
+  min-height: calc(100% - 59px);
 }
 
 /* Conteúdo */
 
 .us4 .content-wrapper {
-  flex: 1;
+  flex: 0 0 auto;
+  min-width: 0;
   padding: 10px 16px 20px;
 }
+
+.us4 .screen-step.active .content-wrapper { flex: 1 0 auto; }
 
 .us4 .page-title {
   margin: 12px 0 6px;
@@ -1634,6 +1656,8 @@ body.pagina-carrossel {
 }
 
 .us4 .term-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 14px 12px;
   border-top: 1px solid #edf2f7;
   background: #fcfdfe;
@@ -1719,12 +1743,12 @@ body.pagina-carrossel {
 }
 
 .us4 .important-box strong {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .us4 .important-box p {
   max-width: none;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* Botão de ajuda */
@@ -1734,7 +1758,7 @@ body.pagina-carrossel {
   display: flex;
   justify-content: flex-end;
   padding: 0 16px;
-  margin-top: auto;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 
@@ -1751,12 +1775,13 @@ body.pagina-carrossel {
   font-size: 11px;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* Rodapé e botão principal */
 
 .us4 .footer-action {
-  margin-top: auto;
+  margin-top: 0;
   padding: 12px 16px 16px;
   background: #fff;
 }
@@ -1775,6 +1800,38 @@ body.pagina-carrossel {
 .us4 .help-pill:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
+}
+
+.us4 #step3.screen-step.active {
+  flex: 1 0 auto;
+  min-height: 0;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+.us4 #step3 .content-wrapper {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 12px 16px 0;
+  padding: 18px;
+  border: 1px solid #e2ebf4;
+  border-radius: 12px;
+  background: #fbfdff;
+}
+
+.us4 #step3 .success-banner { min-height: 42px; font-size: 13px; }
+.us4 #step3 .page-title { margin: 10px 0 0; font-size: 23px; }
+.us4 #step3 .important-box { min-height: 88px; margin-top: 10px; padding: 14px; }
+.us4 #step3 .floating-help { justify-content: flex-start; margin: 10px 0 0; padding: 0; }
+.us4 #step3 .footer-action { padding: 0 16px 12px; }
+
+@media (max-width: 374px) {
+  .us4 .content-wrapper { padding-left: 12px; padding-right: 12px; }
+  .us4 .term-row { padding: 11px 12px; }
+  .us4 #step3 .content-wrapper { margin: 10px 12px 0; padding: 14px; }
+  .us4 #step3 .footer-action { padding: 0 12px 12px; }
 }
 
 /* =====================================================

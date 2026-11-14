@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBarContainer = document.getElementById("progressBarContainer");
   const stepIndicator = document.getElementById("stepIndicator");
   const btnBack = document.getElementById("btnBack");
+  const phoneScreen = document.querySelector(".phone-screen.us4");
 
   function goToStep(step) {
     currentStep = step;
+    phoneScreen.classList.toggle("is-confirmation", step === 3);
 
     // Alterna a exibição das telas
     Object.keys(screens).forEach((key) => {
@@ -51,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (currentStep === 2) {
         goToStep(1); // Volta da etapa 2 para a etapa 1
       } else if (currentStep === 1) {
-        window.location.href = "US3T1.html"; // Retorna ao cadastro
+        if (document.referrer && new URL(document.referrer).origin === location.origin) history.back();
+        else window.location.href = "US3T1.html"; // Retorna ao cadastro quando aberta diretamente
       }
     });
   }
