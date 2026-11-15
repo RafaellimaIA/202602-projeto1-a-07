@@ -36,56 +36,6 @@ body.pagina-inicial {
   background: #dedcdc;
 }
 
-.home-screen {
-  width: min(100%, var(--screen-width));
-  height: min(var(--screen-max-height), 100dvh);
-  min-height: min(var(--screen-max-height), 100dvh);
-  margin: 0 auto;
-  padding: 40px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.home-screen img {
-  width: 150px;
-  height: auto;
-}
-
-.home-screen h1 {
-  margin: 32px 0 12px;
-  color: var(--blue);
-  font-size: clamp(1.7rem, 7vw, 2.3rem);
-}
-
-.home-screen p {
-  margin: 0 0 28px;
-  color: #526b8d;
-  line-height: 1.6;
-}
-
-.home-screen a {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 8px;
-  background: var(--blue);
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.home-screen a:focus-visible {
-  outline: 3px solid var(--green);
-  outline-offset: 3px;
-}
-
 button,
 input {
   font: inherit;

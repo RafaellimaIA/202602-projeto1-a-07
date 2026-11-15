@@ -1,114 +1,57 @@
-# Bulbe Primeiro Ciclo
+# Bulbe Energia — MVP do Squad 07
 
-> Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026  
-> Cliente: **Bulbe Energia** · Turma **A** · Squad **07**
-### Integrantes
+Projeto acadêmico de Projeto em Ciência de Dados e IA do IBMEC, desenvolvido para a Bulbe Energia. O MVP demonstra a jornada de adesão de um novo cliente e as principais dúvidas durante o processo.
 
-- Rafael Lima
-- Rafaela Rezek
-- Matheus Braga
-- Fernanda Venturato
-- Isabela Pires
-### Organização do projeto
+**Turma A · Squad 07 · 2º semestre de 2026**
 
-- GitHub Repository: `202602-projeto1-a-07`
-- GitHub Project: `202602-projeto1-a-07`
+Equipe: Rafael Lima, Rafaela Rezek, Matheus Braga, Fernanda Venturato e Isabela Pires.
 
-**Proposta inicial:** uma experiência web para acompanhar o cliente novo desde a adesão até o pagamento da primeira fatura, deixando claro o andamento da conexão, explicando a primeira fatura e facilitando o pagamento.
+## Executar localmente
 
-> **Observação:** esta é uma proposta inicial do Squad 07 para a Etapa 2 e pode ser refinada após as próximas aulas e reviews.
+O projeto é estático e não precisa de etapa de build. Para testar a navegação, sirva a pasta raiz por HTTP:
 
----
+1. Abra a pasta no VS Code e inicie o Live Server em `index.html`; ou
+2. Execute `python -m http.server 8000` na raiz do repositório e acesse `http://localhost:8000`.
 
-## 1. Problema
+O `index.html` redireciona diretamente para `pages/acesso.html`. Como os caminhos são relativos ao repositório, as telas também funcionam quando publicadas em um subcaminho do GitHub Pages.
 
-O caso da Bulbe mostra que a principal concentração de inadimplência está no primeiro ciclo do cliente. A apresentação informa **32,4% de inadimplência da 1ª fatura**, contra **1,6% na carteira de clientes PF com mais de 4 meses**. Entre as dores apresentadas estão o silêncio durante o onboarding, falhas de entrega de mensagens e dificuldade para entender a primeira fatura.
+## Jornada do MVP
 
-- **Dor escolhida:** experiência do cliente entre a adesão e o pagamento da 1ª fatura.
-- **Evidências:** cerca de 20% das mensagens de WhatsApp falham; clientes chegaram a ficar 20 dias sem comunicação; a fatura antiga tinha pouca transparência.
-- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, com impacto potencial sobre churn do 1º mês.
-
-## 2. Persona e jornada
-
-- **Persona de referência:** Sérgio Carlos Almeida, 50 anos. Engenheiro de obras, mora em Minas Gerais em casa própria com a esposa e dois filhos, sendo o responsável por gerenciar as contas da família (embora a conta de luz da Cemig esteja no nome da esposa).
-Contexto: Conheceu a Bulbe por indicação de um colega de trabalho e por ter visto anúncios online sobre redução de custos na conta de luz. Quer organizar o orçamento familiar e pagar menos na energia do imóvel, mas tem receio de processos burocráticos e pouca familiaridade com aplicativos. Ao fazer o cadastro no app pelo celular com a ajuda do colega, precisou pegar o CPF da esposa e tirar várias fotos da conta de papel da Cemig até conseguir enviar. Concluiu o cadastro esperando uma economia imediata, sem saber que o desconto pode levar até 90 dias para começar a ser aplicado.
-
-Objetivo: Pagar menos na conta de luz de casa sem complicação e conseguir acompanhar mês a mês se a economia prometida está realmente acontecendo de forma transparente. Quer saber exatamente quanto e onde pagar (de preferência via boleto bancário ou PIX) e provar para a esposa que fez um bom negócio e não foi enganado.
-
-- **Mapa de jornada:** [docs/jornada.md](docs/jornada.md)
-
-## 3. Solução
-
-A proposta é uma experiência de primeiro ciclo com três frentes: acompanhamento do status pós-adesão, explicação da primeira fatura e facilitação do pagamento com PIX e lembrete de vencimento.
-
-| Tela | O que faz | História relacionada |
+| Tela | Arquivo | O que demonstra |
 | --- | --- | --- |
-| Acompanhamento | Mostra o status da conexão e orienta os próximos passos | A definir na Aula 20 |
-| Minha 1ª fatura | Explica os principais campos e valores da fatura | A definir na Aula 20 |
-| Pagar fatura | Destaca PIX e informa o vencimento | A definir na Aula 20 |
+| Acesso | `pages/acesso.html` | Entrada, cadastro inicial, início da adesão e ajuda. O botão **Entrar** informa que o login de clientes ainda não está implementado. |
+| Conheça a Bulbe | `pages/carrossel.html` | Carrossel com informações sobre a solução |
+| Cadastro | `pages/US3T1.html` | Dados pessoais, titularidade e opção de salvar neste navegador |
+| Contratação | `pages/US4.html` | Seleção demonstrativa de conta, aceite dos termos e confirmação |
+| Acompanhamento | `pages/US5.html` | Etapas da adesão e explicações expansíveis |
+| Assistente | `pages/US1.html` | Perguntas frequentes e respostas demonstrativas |
 
-- **Histórias de usuário:** [docs/historias.md](docs/historias.md)
-- **Wireframes:** [docs/wireframes/](docs/wireframes/)
+Fluxo principal: acesso → carrossel → cadastro → contratação → acompanhamento. A opção **Primeiro acesso** também permite abrir diretamente o cadastro. O assistente pode ser aberto pelos links de ajuda nas telas.
 
-## 4. Tecnologias
+## Apresentação acadêmica
 
-- HTML, CSS e JavaScript puro (vanilla)
-- Dados fictícios em JSON, lidos com `fetch` (pasta [`data/`](data/))
-- Git e GitHub (Issues, Projects e Pull Requests)
+A apresentação completa do projeto, com problema, persona, histórias de usuário, solução e demonstração das telas, está em [`apresentacao/index.html`](apresentacao/index.html).
 
-## 5. Como executar
+## Tecnologias e escopo
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/[usuario]/202602-projeto1-a-07.git
-   ```
-2. Abra a pasta no VS Code.
-3. Instale a extensão **Live Server**.
-4. Clique com o botão direito em `index.html` e escolha **Open with Live Server**.
+- HTML, CSS e JavaScript sem framework.
+- Os dados em `data/` são exemplos JSON e não estão conectados ao fluxo principal do MVP.
+- O cadastro pode ser salvo localmente no navegador quando essa opção é marcada.
+- O upload de conta, a contratação e as respostas do assistente são demonstrações de interface; não há envio para serviços reais nem integração de backend.
+- Todo dado de cliente usado no repositório é fictício.
 
-> Abrir o `index.html` diretamente com duplo clique não funciona corretamente porque o `fetch` dos arquivos JSON exige um servidor.
+## Estrutura
 
-## 6. Estrutura do repositório
-
-```
-├── index.html
-├── pages/
-├── assets/
-│   ├── css/style.css
-│   ├── js/main.js
-│   ├── js/api.js
-│   └── img/
-├── data/
-├── docs/
-└── .github/
+```text
+index.html                 Entrada do produto, redireciona para acesso
+apresentacao/index.html    Apresentação acadêmica completa
+pages/                     Telas do MVP
+assets/css/                Estilos compartilhados
+assets/js/                 Interações das telas
+assets/img/                Logo e imagens
+data/                      Exemplos JSON não conectados ao MVP
+docs/                      Histórias, jornada e documentação acadêmica
+.github/                   Modelos de issues e pull requests
 ```
 
-## 7. Quadro do projeto
-
-- **GitHub Projects:** [colar aqui o link do quadro]
-
-## 8. Equipe
-
-| Integrante | GitHub | Papel principal |
-| --- | --- | --- |
-| Rafael Lima | [@usuario] | A definir pelo squad |
-| Rafaela Rezek | [@usuario] | A definir pelo squad |
-| Matheus Braga | [@usuario] | A definir pelo squad |
-| Fernanda Venturato | [@usuario] | A definir pelo squad |
-| Isabela Pires | [@usuario] | A definir pelo squad |
-
-## 9. Entregas
-
-| Marco | Aula | Status |
-| --- | --- | --- |
-| Mapa de jornada | 19 | Em preparação |
-| Histórias de usuário | 20 | Pendente |
-| Wireframes | 21–23 | Pendente |
-| Sprint Review I | 24 | Pendente |
-| Implementação | 25–28 | Pendente |
-| Sprint Review II | 29 | Pendente |
-| Versão final | 30 | Pendente |
-
----
-
-> Todos os dados deste repositório são fictícios. Nenhum dado real de cliente da Bulbe Energia é utilizado.
+O workflow `.github/workflows/pages.yml` publica `index.html`, `pages/`, `assets/` e `apresentacao/` no GitHub Pages quando há push em `main`. Em **Settings → Pages**, selecione **GitHub Actions** como fonte de publicação. A publicação também pode ser iniciada manualmente pela aba **Actions**.
