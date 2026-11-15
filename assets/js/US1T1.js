@@ -19,10 +19,3 @@ document.querySelector('#messageForm').addEventListener('submit', (event) => {
   responseBox.hidden = false;
   messageInput.value = '';
 });
-document.querySelector('#closeChat').addEventListener('click', () => {
-  const chat = document.querySelector('.chat');
-  const closed = chat.hidden;
-  chat.hidden = !closed;
-  document.querySelector('#closeChat').textContent = closed ? '×' : '+';
-  document.querySelector('#closeChat').setAttribute('aria-label', closed ? 'Fechar assistente' : 'Abrir assistente');
-});

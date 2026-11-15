@@ -308,20 +308,6 @@ button {
   font-size: 10px;
 }
 
-/* Botão fechar */
-
-.close-button {
-  width: 24px;
-  height: 28px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #526a88;
-  font-size: 25px;
-  font-weight: 300;
-  line-height: 1;
-}
-
 /* Mensagem inicial */
 
 .message-row {
@@ -410,7 +396,6 @@ button {
 /* Acessibilidade dos botões */
 
 .faq-button:focus-visible,
-.close-button:focus-visible,
 .message-form button:focus-visible {
   outline: 2px solid #00a878;
   outline-offset: 2px;
